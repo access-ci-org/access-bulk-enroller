@@ -3,6 +3,12 @@
 ###########################################################################
 ###########################################################################
 
+
+# Exit the script when in a sub-shell, e.g., $(...). Taken from:
+# https://unix.stackexchange.com/a/48550
+set -E
+trap '[ "$?" -ne 99 ] || exit 99' ERR
+
 # Print out usage
 function print_usage {
     echo "Usage: $0 [options]
@@ -19,7 +25,9 @@ Options:
        be set with environment variable CO_API_PASS. If not specified, you
        will be prompted to enter.
     -f First name of a single user to be enrolled.
+    -m Middle name of a single user to be enrolled. May be emtpy.
     -l Last name of a single user to be enrolled.
+    -g Organization of a single user to be enrolled.
     -e Email address of a single user to be enrolled.
     -i Input file containing a list of users to be enrolled. Each line
        contains first name, last name, and email address, separated by
@@ -27,6 +35,7 @@ Options:
     -o Output file for the newly enrolled users. Defaults to STDOUT.
        Each line contains the email address and ACCESS ID separated by
        tabs.
+    -v Print additional informational and warning messages to STDERR.
     -h Print this help message and quit."
 exit
 }
@@ -35,23 +44,23 @@ exit
 function check_required_programs {
     local CHECKFAILED=0
     if ! command -v curl &> /dev/null ; then
-        echo "Please install the 'curl' program (https://curl.se/)."
+        >&2 echo "ERROR: Please install the 'curl' program (https://curl.se/)."
         CHECKFAILED=1
     fi
     if ! command -v jq &> /dev/null ; then
-        echo "Please install the 'jq' program (https://stedolan.github.io/jq/)."
+        >&2 echo "ERROR: Please install the 'jq' program (https://stedolan.github.io/jq/)."
         CHECKFAILED=1
     else
         # jq version 1.6 or higher is needed for 'base64d'
         JQVERSTR=`jq --version`
         [[ "${JQVERSTR}" =~ jq-([0-9])[.]([0-9]*) ]] && JQMAJ=${BASH_REMATCH[1]} && JQMIN=${BASH_REMATCH[2]}
         if [ "${#JQMAJ}" -eq "0" -o "${#JQMIN}" -eq "0" -o "${JQMAJ}" -lt "1" -o "${JQMIN}" -lt "6" ] ; then
-            echo "Please install 'jq' version 1.6 or higher (https://stedolan.github.io/jq/)."
+            >&2 echo "ERROR: Please install 'jq' version 1.6 or higher (https://stedolan.github.io/jq/)."
             CHECKFAILED=1
         fi
     fi
     if [ "${CHECKFAILED}" -eq "1" ] ; then
-        echo "Exiting."
+        >&2 echo "Exiting."
         exit 1
     fi
 }
@@ -59,21 +68,24 @@ function check_required_programs {
 # Check for command line options, or prompt user for options
 function get_command_line_options {
     local OPTIND
-    while getopts :s:u:p:f:l:e:i:o:h flag ; do
+    while getopts :s:u:p:f:m:l:g:e:i:o:vh flag ; do
         case "${flag}" in
             s) server=${OPTARG};;
             u) username=${OPTARG};;
             p) password=${OPTARG};;
             f) firstname=${OPTARG};;
+            m) middlename={$OPTARG};;
             l) lastname=${OPTARG};;
+            g) organization=${OPTARG};;
             e) email=${OPTARG};;
             i) infile=${OPTARG};;
             o) outfile=${OPTARG};;
-            h) print_usage
+            v) verbose="1";;
+            h) print_usage;;
         esac
     done
 
-    # If server not specified, default to CO_API_SERVER or regsitry.access-ci.org
+    # If no server specified, default to CO_API_SERVER or regsitry.access-ci.org
     if [ -z "${server}" ] ; then
         server="${CO_API_SERVER}"
     fi
@@ -98,12 +110,20 @@ function get_command_line_options {
         echo
     fi
 
-    # If infile is not specified, then check for first name, last name, and email
+    # If no infile specified, then check for first name, last name,
+    # organization, and email
     if [ -z "${infile}" ] ; then
-        echo "Adding a single user to ${server}..."
+        if [ -n "${verbose}" ] ; then
+            >&2 echo "INFO: Adding a single user to ${server}..."
+        fi
         # Prompt for first name if not passed in
         if [ -z "${firstname}" ] ; then
             until [[ "${firstname}" ]] ; do read -rp 'First name: ' firstname ; done
+        fi
+
+        # Prompt for middle name (may be blank)
+        if [ -z "${middlename}" ] ; then
+            read -rp 'Middle name: ' middlename
         fi
 
         # Prompt for last name if not passed in
@@ -111,9 +131,40 @@ function get_command_line_options {
             until [[ "${lastname}" ]] ; do read -rp 'Last name: ' lastname ; done
         fi
 
+        # Prompt for organization if not passed in
+        if [ -z "${organization}" ] ; then
+            until [[ "${organization}" ]] ; do read -rp 'Organization: ' organization ; done
+        fi
+
         # Prompt for email if not passed in
         if [ -z "${email}" ] ; then
             until [[ "${email}" ]] ; do read -rp 'Email address: ' email ; done
+        fi
+    fi
+
+    if [ -n "${verbose}" ] ; then
+        >&2 echo "INFO: API server   = ${server}"
+        >&2 echo "INFO: API username = ${username}"
+        if [ -n "${firstname}" ] ; then
+            >&2 echo "INFO: firstname    = ${firstname}"
+        fi
+        if [ -n "${middlename}" ] ; then
+            >&2 echo "INFO: middlename   = ${middlename}"
+        fi
+        if [ -n "${lastname}" ] ; then
+            >&2 echo "INFO: lastname     = ${lastname}"
+        fi
+        if [ -n "${organization}" ] ; then
+            >&2 echo "INFO: organization = ${organization}"
+        fi
+        if [ -n "${email}" ] ; then
+            >&2 echo "INFO: email        = ${email}"
+        fi
+        if [ -n "${infile}" ] ; then
+            >&2 echo "INFO: infile       = ${infile}"
+        fi
+        if [ -n "${outfile}" ] ; then
+            >&2 echo "INFO: outfile      = ${outfile}"
         fi
     fi
 }
@@ -122,8 +173,6 @@ function get_command_line_options {
 # Parameter: email address to check
 # Return (echo): ACCESS ID for email address, or empty string if not found
 # Usage: existing_access_id=$(check_exising_email "jsmith@gmail.com")
-set -E
-trap '[ "$?" -ne 99 ] || exit 99' ERR
 function check_existing_email {
     local email="$1"
     local encodedemail=`jq -rn --arg x ${email} '$x|@uri'`
@@ -144,32 +193,51 @@ function check_existing_email {
     fi
 }
 
-# Print out an email address and the corresponding ACCESS ID
-function output_email_and_accessid {
-    local email="$1"
-    local accessid="$2"
+# Print out user parameters and the corresponding ACCESS ID
+function output_accessid_for_user {
+    local firstname="$1"
+    local middlename="$2"
+    local lastname="$3"
+    local organization="$4"
+    local email="$5"
+    local accessid="$6"
     if [ -n "${outfile}" ] ; then
-        if [ "$firstline" == "1" ] ; then
-            printf "${email}\t${accessid}\n" >> "${outfile}"
+        if [ -n "${firstline}" ] ; then
+            printf "${firstname},${middlename},${lastname},${organization},${email},${accessid}\n" >> "${outfile}"
         else
-            printf "${email}\t${accessid}\n" > "${outfile}"
+            printf "${firstname},${middlename},${lastname},${organization},${email},${accessid}\n" > "${outfile}"
         fi
     else
-        printf "${email}\t${accessid}\n";
+        printf "${firstname},${middlename},${lastname},${organization},${email},${accessid}\n";
     fi
     firstline="1" # For the first line, overwrite any existing file
+}
+
+function get_user_info {
+    local accessid="$1"
+    local response=$(curl -s -u "${username}:${password}" "https://${server}/registry/api/co/2/core/v1/people/${accessid}")
+    >&2 echo "${response}"
 }
 
 # Enroll a user, first checking if the email address alread exists
 function enroll_user {
     local firstname="$1"
-    local lastname="$2"
-    local email="$3"
+    local middlename="$2"
+    local lastname="$3"
+    local organization="$4"
+    local email="$5"
     existing_access_id=$(check_existing_email "${email}")
     if [ -n "${existing_access_id}" ] ; then
-        output_email_and_accessid "${email}" "${existing_access_id}"
+        if [ -n "${verbose}" ] ; then
+            >&2 echo "INFO: Found existing account for ${email}: ${existing_access_id}"
+        fi
+        output_accessid_for_user "${firstname}" "${middlename}" "${lastname}" "${organization}" "${email}" "${existing_access_id}"
+        get_user_info "${existing_access_id}"
     else
-        echo "No matching ACCESS ID for ${email}"
+        # Probabbly replace this echo with a different message
+        if [ -n "${verbose}" ] ; then
+            >&2 echo "INFO: No matching ACCESS ID for ${email}. Adding new user."
+        fi
         # TODO: This is were we actually add a new user 
         #       Probably another function
     fi
@@ -182,13 +250,24 @@ function enroll_user {
 check_required_programs
 get_command_line_options "$@"
 
+
 if [ -n "${infile}" ] ; then
+    linecount=1;
     while read -r LINE ; do
-        IFS='	' read -ra params <<<"$LINE"
-        enroll_user "${params[0]}" "${params[1]}" "${params[2]}"
+        IFS=',' read -ra params <<<"${LINE}"
+        # Sanity check - make sure all paramters are present
+        # Note that middle name (params[1]) may be blank
+        if [ -n "${params[0]}" -a -n "${params[2]}" -a -n "${params[3]}" -a -n "${params[4]}" ] ; then
+            enroll_user "${params[0]}" "${params[1]}" "${params[2]}" "${params[3]}" "${params[4]}"
+        else
+            if [ -n "${verbose}" ] ; then
+                >&2 echo "ERROR: Parameter(s) missing on line ${linecount}. Skipping."
+            fi
+        fi
+        linecount=$((linecount+1))
     done < "${infile}"
 else
-    enroll_user "${firstname}" "${lastname}" "${email}"
+    enroll_user "${firstname}" "${middlename}" "${lastname}" "${organization}" "${email}"
 fi
 
 ####################
