@@ -68,13 +68,14 @@ function check_required_programs {
 # Check for command line options, or prompt user for options
 function get_command_line_options {
     local OPTIND
+    local middleopt="0"
     while getopts :s:u:p:f:m:l:g:e:i:o:vh flag ; do
         case "${flag}" in
             s) server=${OPTARG};;
             u) username=${OPTARG};;
             p) password=${OPTARG};;
             f) firstname=${OPTARG};;
-            m) middlename={$OPTARG};;
+            m) middlename=${OPTARG}; middleopt="1";;
             l) lastname=${OPTARG};;
             g) organization=${OPTARG};;
             e) email=${OPTARG};;
@@ -122,7 +123,7 @@ function get_command_line_options {
         fi
 
         # Prompt for middle name (may be blank)
-        if [ -z "${middlename}" ] ; then
+        if [ -z "${middlename}" -a "${middleopt}" == "0" ] ; then
             read -rp 'Middle name: ' middlename
         fi
 
@@ -169,24 +170,39 @@ function get_command_line_options {
     fi
 }
 
-# Check if there is already an account associated with an email address
+# Return the COPersonIdentifier associated with an email address, or
+# '' if not found
 # Parameter: email address to check
-# Return (echo): ACCESS ID for email address, or empty string if not found
-# Usage: existing_access_id=$(check_exising_email "jsmith@gmail.com")
-function check_existing_email {
+# Return (echo): CoPersonId for email address, or empty string if not found
+# Usage: co_person_id=$(get_co_person_id_for_email "jsmith@gmail.com")
+function get_co_person_id_for_email {
     local email="$1"
     local encodedemail=`jq -rn --arg x ${email} '$x|@uri'`
     local response=$(curl -s -u "${username}:${password}" "https://${server}/registry/co_people.json?coid=2&search.mail=${encodedemail}")
     local email_count=$(echo "${response}" | jq '.CoPeople | length')
 
     if [ $? -ne 0 -o -z "${email_count}" ] ; then
-        >&2 echo 'ERROR: Curl call for checking email address failed. Exiting.'
+        >&2 echo 'ERROR: Search for email address failed. Exiting.'
         exit 99
     fi
 
     if [ $email_count -gt 0 ] ; then
-        match_user=$(echo ${response} | jq -r '.CoPeople[0].Id')
-        response=$(curl -s -u "${username}:${password}" "https://registry-dev.access-ci.org/registry/identifiers.json?copersonid=${match_user}")
+        echo ${response} | jq -r '.CoPeople[0].Id'
+    else
+        echo ''
+    fi
+}
+
+# Return the ACCESS CI associated with an email address, or '' if not found
+# Parameter: email address to check
+# Return (echo): ACCESS ID for email address, or empty string if not found
+# Usage: access_id=$(get_access_id_for_email "jsmith@gmail.com")
+function get_access_id_for_email {
+    local email="$1"
+    local co_person_id=$(get_co_person_id_for_email "${email}")
+
+    if [ -n "${co_person_id}" ] ; then
+        response=$(curl -s -u "${username}:${password}" "https://${server}/registry/identifiers.json?copersonid=${co_person_id}")
         echo "${response}" | jq -r '.Identifiers[] | select(.Type=="accessid").Identifier'
     else
         echo ''
@@ -194,7 +210,7 @@ function check_existing_email {
 }
 
 # Print out user parameters and the corresponding ACCESS ID
-function output_accessid_for_user {
+function output_access_id_for_user {
     local firstname="$1"
     local middlename="$2"
     local lastname="$3"
@@ -213,10 +229,275 @@ function output_accessid_for_user {
     firstline="1" # For the first line, overwrite any existing file
 }
 
+# Temporary function to print out info for a given accessid
 function get_user_info {
     local accessid="$1"
     local response=$(curl -s -u "${username}:${password}" "https://${server}/registry/api/co/2/core/v1/people/${accessid}")
     >&2 echo "${response}"
+}
+
+# Return the ID of the first Active Terms and Conditions element
+function get_active_tandc_id {
+    local response=$(curl -s -u "${username}:${password}" "https://${server}/registry/co_terms_and_conditions.json?coid=2")
+    echo "${response}" | jq -r '.CoTermsAndConditions[] | select(.Status=="Active") | .Id'
+}
+
+# Get the JSON statement to create a new user. 
+# Note: make sure to use TAB characters at the beginning of the lines
+# in the JSON blob below.
+function get_new_user_json {
+    local firstname="$1"
+    local middlename="$2"
+    local lastname="$3"
+    local organization="$4"
+    local email="$5"
+    # If middlename is empty, set it to 'null'. Otherwise, quote it.
+    if [ -z "${middlename}" ] ; then
+        middlename='null'
+    else
+        middlename='"'"${middlename}"'"'
+    fi
+    cat <<-EOF
+	{
+		"CoPerson": {
+			"co_id": "2",
+			"status": "A",
+			"date_of_birth": null,
+			"timezone": null
+		},
+		"CoGroupMember": [
+			{
+				"co_group_id": "5",
+				"member": true,
+				"owner": false,
+				"valid_from": null,
+				"valid_through": null,
+				"co_group_nesting_id": null
+			},
+			{
+				"co_group_id": "6",
+				"member": true,
+				"owner": false,
+				"valid_from": null,
+				"valid_through": null,
+				"co_group_nesting_id": null
+			}
+		],
+		"EmailAddress": [
+			{
+				"mail": "${email}",
+				"description": null,
+				"type": "official",
+				"verified": true
+			}
+		],
+		"CoPersonRole": [
+			{
+				"sponsor_co_person_id": null,
+				"cou_id": null,
+				"affiliation": "affiliate",
+				"title": null,
+				"o": "${organization}",
+				"ou": null,
+				"valid_from": null,
+				"valid_through": null,
+				"ordr": null,
+				"status": "A",
+				"manager_co_person_id": null,
+				"Address": [],
+				"AdHocAttribute": [],
+				"TelephoneNumber": []
+			}
+		],
+		"Name": [
+			{
+				"honorific": null,
+				"given": "${firstname}",
+				"middle": ${middlename},
+				"family": "${lastname}",
+				"suffix": null,
+				"type": "official",
+				"language": null,
+				"primary_name": true
+			}
+		],
+		"Url": [],
+		"OrgIdentity": [
+			{
+				"status": null,
+				"date_of_birth": null,
+				"affiliation": null,
+				"title": null,
+				"o": null,
+				"ou": null,
+				"co_id": "2",
+				"valid_from": null,
+				"valid_through": null,
+				"manager_identifier": null,
+				"sponsor_identifier": null,
+				"Address": [],
+				"AdHocAttribute": [],
+				"EmailAddress": [],
+                "Identifier": [],
+				"Name": [
+					{
+						"honorific": null,
+						"given": "${firstname}",
+						"middle": ${middlename},
+						"family": "${lastname}",
+						"suffix": null,
+						"type": "official",
+						"language": null,
+						"primary_name": true
+					}
+				],
+				"TelephoneNumber": [],
+				"Url": []
+			}
+		],
+		"Krb": [],
+		"SshKey": []
+	}
+EOF
+}
+
+#
+function get_new_orgidentity_json {
+    local firstname="$1"
+    local middlename="$2"
+    local lastname="$3"
+    local organization="$4"
+    local email="$5"
+    # If middlename is empty, set it to 'null'. Otherwise, quote it.
+    if [ -z "${middlename}" ] ; then
+        middlename='null'
+    else
+        middlename='"'"${middlename}"'"'
+    fi
+    cat <<-EOF
+	{
+		"RequestType":"OrgIdentities",
+		"Version":"1.0",
+		"OrgIdentities":
+		[
+			{
+				"Version":"1.0",
+				"Affiliation": null,
+				"Title": null,
+				"O": null,
+				"Ou": null,
+				"CoId": "2",
+				"ValidFrom": null,
+				"ValidThrough": null,
+				"DateOfBirth": null
+			}
+		]
+	}
+EOF
+}
+
+#
+function get_link_json {
+    local co_person_id="$1"
+    local org_identity_id="$2"
+    cat <<-EOF
+	{
+		"RequestType":"CoOrgIdentityLinks",
+		"Version":"1.0",
+		"CoOrgIdentityLinks":
+		[
+			{
+				"Version": "1.0",
+				"CoPersonId": "${co_person_id}",
+				"OrgIdentityId": "${org_identity_id}"
+			}
+		]
+	}
+EOF
+}
+
+function get_new_name_json {
+    local firstname="$1"
+    local middlename="$2"
+    local lastname="$3"
+    local co_org_identity_id="$4"
+    # If middlename is empty, set it to 'null'. Otherwise, quote it.
+    if [ -z "${middlename}" ] ; then
+        middlename='null'
+    else
+        middlename='"'"${middlename}"'"'
+    fi
+    cat <<-EOF
+	{
+		"RequestType":"Names",
+		"Version":"1.0",
+		"Names":
+		[
+			{
+				"Version": "1.0",
+				"Honorific": null,
+				"Given": "${firstname}",
+				"Middle": ${middlename},
+				"Family": "${lastname}",
+				"Suffix": null,
+				"Type": "official",
+				"Language": "",
+				"PrimaryName": true,
+				"Person": 
+				{
+					"Type": "Org",
+					"Id": "${co_org_identity_id}"
+				}
+			}
+		]
+	}
+EOF
+}
+
+#
+function get_new_identifier_json {
+    local access_id="$1"
+    local co_org_identity_id="$2"
+    cat <<-EOF
+	{
+		"RequestType":"Identifiers",
+		"Version":"1.0",
+		"Identifiers":
+		[
+			{
+				"Version": "1.0",
+				"Type": "eppn",
+				"Identifier": "${access_id}@access-ci.org",
+				"Login": true,
+				"Person":{"Type":"Org","Id":"${co_org_identity_id}"},
+				"Status": "Active"
+			}
+		]
+	}
+EOF
+}
+
+#
+function get_new_tandc_json {
+	local co_tandc_id="$1"
+    local co_person_id="$2"
+    cat <<-EOF
+	{
+		"RequestType":"CoTAndCAgreements",
+		"Version":"1.0",
+		"CoTAndCAgreements":
+		[
+			{
+				"Version": "1.0",
+				"CoTermsAndConditionsId": "${co_tandc_id}",
+				"Person": {
+					"Type":"CO",
+					"Id":"${co_person_id}"
+				}
+			}
+		]
+	}
+EOF
 }
 
 # Enroll a user, first checking if the email address alread exists
@@ -226,20 +507,81 @@ function enroll_user {
     local lastname="$3"
     local organization="$4"
     local email="$5"
-    existing_access_id=$(check_existing_email "${email}")
-    if [ -n "${existing_access_id}" ] ; then
+    local access_id=$(get_access_id_for_email "${email}")
+    if [ -n "${access_id}" ] ; then
         if [ -n "${verbose}" ] ; then
-            >&2 echo "INFO: Found existing account for ${email}: ${existing_access_id}"
+            >&2 echo "INFO: Found existing account for ${email}: ${access_id}"
         fi
-        output_accessid_for_user "${firstname}" "${middlename}" "${lastname}" "${organization}" "${email}" "${existing_access_id}"
-        get_user_info "${existing_access_id}"
+        output_access_id_for_user "${firstname}" "${middlename}" "${lastname}" "${organization}" "${email}" "${access_id}"
+        get_user_info "${access_id}"
     else
-        # Probabbly replace this echo with a different message
+        # Probabbly remove/move this echo
         if [ -n "${verbose}" ] ; then
             >&2 echo "INFO: No matching ACCESS ID for ${email}. Adding new user."
         fi
-        # TODO: This is were we actually add a new user 
-        #       Probably another function
+        # This is where we actually add a new user 
+        # Maybe move to another function???
+        local newuserjson=$(get_new_user_json "${firstname}" "${middlename}" "${lastname}" "${organization}" "${email}")
+        #echo "${newuserjson}"
+        local response=$(curl -s -w "%{http_code}" -u "${username}:${password}" -X POST -H 'Content-Type: application/json' -d "${newuserjson}" "https://${server}/registry/api/co/2/core/v1/people")
+        local body="${response::-3}"
+        local response_code="${response: -3:3}"
+        echo "body for new user = ${body}"
+        echo "response_code = ${response_code}"
+        if [ "${response_code}" == "201" ] ; then
+            # Successful creation of account. Get the co_person_id and access_id
+            local co_person_id=$(get_co_person_id_for_email "${email}")
+            access_id=$(get_access_id_for_email "${email}")
+            if [ -n "${co_person_id}" -a -n "${access_id}" ] ; then
+                >&2 echo "Creating OrgIdentity"
+                local neworgidjson=$(get_new_orgidentity_json "${firstname}" "${middlename}" "${lastname}" "${organization}" "${email}")
+                response=$(curl -s -w "%{http_code}" -u "${username}:${password}" -X POST -H 'Content-Type: application/json' -d "${neworgidjson}" "https://${server}/registry/org_identities.json")
+                body="${response::-3}"
+                response_code="${response: -3:3}"
+                echo "body of new org_identities = ${body}"
+                echo "response_code = ${response_code}"
+
+                local co_org_identity_id=$(echo "${body}" | jq -r '.Id')
+                echo "co_org_identity_id = ${co_org_identity_id}"
+                # Link the orgid with the co_persion_id
+                local newlinkjson=$(get_link_json "${co_person_id}" "${co_org_identity_id}")
+                response=$(curl -s -w "%{http_code}" -u "${username}:${password}" -X POST -H 'Content-Type: application/json' -d "${newlinkjson}" "https://${server}/registry/co_org_identity_links.json")
+                body="${response::-3}"
+                response_code="${response: -3:3}"
+                echo "body of linking = ${body}"
+                echo "response_code = ${response_code}"
+
+                # Create a new Name for the OrgId
+                local newnamejson=$(get_new_name_json "${firstname}" "${middlename}" "${lastname}" "${co_org_identity_id}")
+                response=$(curl -s -w "%{http_code}" -u "${username}:${password}" -X POST -H 'Content-Type: application/json' -d "${newnamejson}" "https://${server}/registry/names.json")
+                body="${response::-3}"
+                response_code="${response: -3:3}"
+                echo "body of new name = ${body}"
+                echo "response_code = ${response_code}"
+
+                # Create a new Identifier for the OrgId
+                local newidentifierjson=$(get_new_identifier_json "${access_id}" "${co_org_identity_id}")
+                response=$(curl -s -w "%{http_code}" -u "${username}:${password}" -X POST -H 'Content-Type: application/json' -d "${newidentifierjson}" "https://${server}/registry/identifiers.json")
+                body="${response::-3}"
+                response_code="${response: -3:3}"
+                echo "body of new identifier = ${body}"
+                echo "response_code = ${response_code}"
+
+                # Create a new Terms & Conditions Agreement
+                if [ -n "${tandc_id}" ] ; then
+                    local newtandcjson=$(get_new_tandc_json "${tandc_id}" "${co_person_id}")
+                    response=$(curl -s -w "%{http_code}" -u "${username}:${password}" -X POST -H 'Content-Type: application/json' -d "${newtandcjson}" "https://${server}/registry/co_t_and_c_agreements.json")
+                    body="${response::-3}"
+                    response_code="${response: -3:3}"
+                    echo "body of new tandc agreement = ${body}"
+                    echo "response_code = ${response_code}"
+                fi
+
+            else
+                >&2 "ERROR: Successfully created new account, but unable to find ACCESS ID. Exiting."
+                exit
+            fi
+        fi
     fi
 }
 
@@ -250,6 +592,7 @@ function enroll_user {
 check_required_programs
 get_command_line_options "$@"
 
+tandc_id=$(get_active_tandc_id)
 
 if [ -n "${infile}" ] ; then
     linecount=1;
