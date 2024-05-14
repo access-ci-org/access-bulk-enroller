@@ -105,9 +105,9 @@ The `organization` must match one of the Organizations in the ACCESS central
 database. See [ACCESS CI Organizations](access_orgs.md) for more
 information.
 
-By default, output is to STDOUT. This can be overridden with the `-o
-<outfile> option. The resulting file is a CSV file where each liine is of
-the following format:
+By default, output is to STDOUT. This can be overridden with the
+`-o <outfile>` option. The resulting file is a CSV file where each line is
+of the following format:
 
 ```
 firstname,middlename,lastname,organization,emailaddress,accessid
