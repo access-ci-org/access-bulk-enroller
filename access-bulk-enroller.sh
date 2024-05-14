@@ -39,25 +39,29 @@ Enroll new users in ACCESS COmanage Registry using name and email address.
 Note that 'curl' errors are fatal and will halt the script if they occur.
 
 Options:
-    -s ACCESS COmanage Registry server. Defaults to registry.access-ci.org.
-       Can also be set with environment variable CO_API_SERVER.
-    -u Username for connecting to COmanage Registry API endpoints. Can also
-       be set with environment variable CO_API_USER. If not specified, you
-       will be prompted to enter.
-    -p Password for connecting to COmanage Registry API endpoints. Can also
-       be set with environment variable CO_API_PASS. If not specified, you
-       will be prompted to enter.
-    -f First name of a single user to be enrolled.
-    -m Middle name of a single user to be enrolled. May be emtpy.
-    -l Last name of a single user to be enrolled.
-    -g Organization of a single user to be enrolled.
-    -e Email address of a single user to be enrolled.
-    -i Input file containing a list of users to be enrolled. Each line
-       contains first name, last name, and email address, separated by
-       tabs. Overrides -f,-l,-e.
-    -o Output file for the newly enrolled users. Defaults to STDOUT.
-       Each line contains the email address and ACCESS ID separated by
-       tabs.
+    -s <server> ACCESS COmanage Registry server. Defaults to
+       registry.access-ci.org.  Can also be set with environment variable
+       CO_API_SERVER. For the TEST COmanage server, use
+       registry-test.access-ci.org. For the DEV COmanage server, use
+       registry-dev.access-ci.org.
+    -u <username> Username for connecting to COmanage Registry API
+       endpoints. Can also be set with environment variable CO_API_USER. If
+       not specified, you will be prompted to enter.
+    -p <password> Password for connecting to COmanage Registry API
+       endpoints. Can also be set with environment variable CO_API_PASS. If
+       not specified, you will be prompted to enter.
+    -f <firstname> First name of a single user to be enrolled.
+    -m <middlename> Middle name of a single user to be enrolled. May be
+       emtpy (e.g., '').
+    -l <lastname> Last name of a single user to be enrolled.
+    -g <organization> Organization of a single user to be enrolled.
+    -e <email> Email address of a single user to be enrolled.
+    -i <infile> Input CSV file containing a list of users to be enrolled.
+       Each line contains first name, middle name, last name, organizaton,
+       and email address, separated by commas. Overrides -f,-m,-l,-g,-e.
+    -o <outfile> Output CSV file for the newly enrolled users. Defaults to
+       STDOUT.  Each line contains first name, middle name, last name,
+       organization, email address, and ACCESS ID, separated by commas.
     -v Print additional informational and warning messages to STDERR.
     -h Print this help message and quit."
     exit 99
