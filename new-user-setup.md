@@ -66,7 +66,16 @@ We do not recommend the [Phone
 Call](https://guide.duo.com/universal-prompt#phone-call) option as it is
 unreliable.
 
-Click the “Get Started” button to begin the process.
+If you do not have a modern cell phone supported by the Duo security app,
+you can try one of the following
+[alternatives](https://guide.duo.com/universal-prompt#platform-authenticators):
+
+* Touch ID / Face ID on a Mac device
+* Windows Hello on a Windows PC
+* Hardware security key such as a [YubiKey](https://www.amzn.com/B0BVNPWPCN)
+* Duo security app on a Mac / Android Tablet
+
+Click the “Get Started” button to begin the enrollment process.
 
 ![Duo Get Started](images/Picture09.png)
 
