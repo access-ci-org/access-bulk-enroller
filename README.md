@@ -56,6 +56,7 @@ otherwise.
 Usage: ./access-bulk-enroller.sh [options]
 
 Enroll new users in ACCESS COmanage Registry using name and email address.
+Note that 'curl' errors are fatal and will halt the script if they occur.
 
 Options:
     -s ACCESS COmanage Registry server. Defaults to registry.access-ci.org.
@@ -67,7 +68,9 @@ Options:
        be set with environment variable CO_API_PASS. If not specified, you
        will be prompted to enter.
     -f First name of a single user to be enrolled.
+    -m Middle name of a single user to be enrolled. May be emtpy.
     -l Last name of a single user to be enrolled.
+    -g Organization of a single user to be enrolled.
     -e Email address of a single user to be enrolled.
     -i Input file containing a list of users to be enrolled. Each line
        contains first name, last name, and email address, separated by
@@ -75,6 +78,6 @@ Options:
     -o Output file for the newly enrolled users. Defaults to STDOUT.
        Each line contains the email address and ACCESS ID separated by
        tabs.
+    -v Print additional informational and warning messages to STDERR.
     -h Print this help message and quit.
 ```
-
