@@ -1,7 +1,7 @@
 # ACCESS Bulk Enroller
 
 This repository contains a script to enroll users into an ACCESS COmanage
-Registry using just first name, last name, and email address. The script
+Registry using name, organization, and email address. The script
 requires `curl` and `jq` to be installed. Help is available by using the
 `-h` command line option. 
 
@@ -18,17 +18,17 @@ To create an API user, log in to the appropriate ACCESS COmanage
 Registry for [DEV](https://registry-dev.access-ci.org/),
 [TEST](https://registry-test.access-ci.org/), or
 [PROD](https://registry.access-ci.org/) as a platform administrator or a CO
-administrator. If you logged in as a plaform administrator, select the
+administrator. If logged in as a plaform administrator, select the
 "Users" Collaboration. Then:
 
 1. In the left column, select "Configuration".
 1. In the main window, click "API Users".
 1. Click "+ Add API user" in the upper-right.
-1. Select a unique name for the user. `co_2.` will be prepended to the
-   resulting user name. Check the "Privileged" checkbox. Then click the
-   "ADD" button.
+1. Select a unique name for the user such as `bulk_api_user`. `co_2.`
+   will be prepended to the resulting user name. Check the "Privileged"
+   checkbox. Then click the "ADD" button.
 1. Back on the "API Users" page, click the newly added API User Name.
-1. On the "Edit co\_2.new\_api\_user" page, click the "Generate API Key"
+1. On the "Edit co\_2.bulk\_api\_user" page, click the "Generate API Key"
    button.
 1. You will be shown the API User name and API Key (a.k.a., password).
    Record these values since the API Key will not be shown again. You can
@@ -46,9 +46,9 @@ administrator. If you logged in as a plaform administrator, select the
    Then click the "ADD" button.
 
 The API User Name and API Key (password) are required to use the script. You
-can specify them via command line options `-u` and `-p`, by environment
-variables `CO_API_USER` and `CO_API_PASS`, or you can be prompted for them
-otherwise.
+can specify them via command line options `-u` and `-p` or via environment
+variables `CO_API_USER` and `CO_API_PASS`. You will be prompted for them
+if not otherwise set.
 
 ## Running the Script
 
@@ -106,8 +106,8 @@ database. See [ACCESS CI Organizations](access_orgs.md) for more
 information.
 
 By default, output is to STDOUT. This can be overridden with the
-`-o <outfile>` option. The resulting file is a CSV file where each line is
-of the following format:
+`-o <outfile>` option. The resulting outfile is a CSV file where each line
+is of the following format:
 
 ```
 firstname,middlename,lastname,organization,emailaddress,accessid
