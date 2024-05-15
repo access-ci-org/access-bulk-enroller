@@ -299,43 +299,6 @@ function get_access_id_for_email {
 }
 
 ###########################################################################
-# Output original user parameters and the corresponding ACCESS ID.
-# Print to $outfile (global variable) if given, or STDOUT otherwise.
-# Parameters:
-#    firstname - first name of the user
-#    middlename - middle name of the user (can be empty string)
-#    lastname - last name of the user
-#    organization - organization/university of the user
-#    email - email of the user
-#    accessid - ACCESS ID of the user
-###########################################################################
-function output_access_id_for_user {
-    local firstname="$1"
-    local middlename="$2"
-    local lastname="$3"
-    local organization="$4"
-    local email="$5"
-    local accessid="$6"
-
-    if [ -n "${outfile}" ] ; then
-        if [ -n "${firstline}" ] ; then # Append to file after first line
-            printf "%s,%s,%s,%s,%s,%s\n" \
-                "${firstname}" "${middlename}" "${lastname}" \
-                "${organization}" "${email}" "${accessid}" >> "${outfile}"
-        else # Overwrite any existing file for the first line
-            printf "%s,%s,%s,%s,%s,%s\n" \
-                "${firstname}" "${middlename}" "${lastname}" \
-                "${organization}" "${email}" "${accessid}" > "${outfile}"
-        fi
-    else # Print to STDOUT
-        printf "%s,%s,%s,%s,%s,%s\n" \
-            "${firstname}" "${middlename}" "${lastname}" \
-            "${organization}" "${email}" "${accessid}";
-    fi
-    firstline="1" # For the first line only, overwrite any existing file
-}
-
-###########################################################################
 # Helper function to print full user info for a given ACCESSID
 # Parameter: accessid - the ACCESS ID to search for
 ###########################################################################
@@ -359,6 +322,25 @@ function get_active_tandc_id {
     curl_call_registry body response_code \
         "co_terms_and_conditions.json?coid=2"
     echo "${body}" | jq -r '.CoTermsAndConditions[] | select(.Status=="Active") | .Id' | head -1
+}
+
+###########################################################################
+# Check a curl response code against a desired HTTP code (e.g., "201").
+# If no match, exit the script with an error message.
+# Parameters:
+#    response_code - the HTTP code returned from curl
+#    desired_code - the "successful" HTTP code, e.g., "201"
+#    error_msg - a message to print if the response code doesn't match
+###########################################################################
+function check_response_code {
+    local response_code="$1"
+    local desired_code="$2"
+    local error_msg="$3"
+
+    if [ "${response_code}" != "${desired_code}" ] ; then
+        >&2 echo "ERROR: ${error_msg} Exiting."
+        exit 99
+    fi
 }
 
 ###########################################################################
@@ -465,10 +447,8 @@ END
     local response_code
     curl_call_registry body response_code \
         "api/co/2/core/v1/people" "${new_user_json}"
-    if [ "${response_code}" != "201" ] ; then
-        >&2 echo "ERROR: Unable to create new ACCESS user for ${email}. Exiting."
-        exit 99
-    fi
+    check_response_code "${response_code}" "201" \
+        "Unable to create new ACCESS user for ${email}."
 }
 
 ###########################################################################
@@ -509,10 +489,8 @@ END
     local response_code
     curl_call_registry body response_code \
         "org_identities.json" "${new_org_identity_json}"
-    if [ "${response_code}" != "201" ] ; then
-        >&2 echo "ERROR: Unable to create new Organizational Identity. Exiting."
-        exit 99
-    fi
+    check_response_code "${response_code}" "201" \
+        "Unable to create new Organizational Identity."
 
     echo "${body}" | jq -r '.Id'
 }
@@ -553,10 +531,8 @@ END
     local response_code
     curl_call_registry body response_code \
         "co_org_identity_links.json" "${new_link_json}"
-    if [ "${response_code}" != "201" ] ; then
-        >&2 echo "ERROR: Unable to create link between CoPerson ${co_person_id} and OrgId ${org_identity_id}. Exiting."
-        exit 99
-    fi
+    check_response_code "${response_code}" "201" \
+        "Unable to create link between CoPerson ${co_person_id} and OrgId ${org_identity_id}."
 }
 
 ###########################################################################
@@ -616,10 +592,8 @@ END
     local response_code
     curl_call_registry body response_code \
         "names.json" "${new_name_json}"
-    if [ "${response_code}" != "201" ] ; then
-        >&2 echo "ERROR: Unable to create a new Name for ${firstname} ${lastname}. Exiting."
-        exit 99
-    fi
+    check_response_code "${response_code}" "201" \
+        "Unable to create a new Name for ${firstname} ${lastname}."
 }
 
 ###########################################################################
@@ -661,10 +635,8 @@ END
     local response_code
     curl_call_registry body response_code \
         "identifiers.json" "${new_identifier_json}"
-    if [ "${response_code}" != "201" ] ; then
-        >&2 echo "ERROR: Unable to create a new Identifier for ${accessid}. Exiting."
-        exit 99
-    fi
+    check_response_code "${response_code}" "201" \
+        "Unable to create a new Identifier for ${accessid}."
 }
 
 ###########################################################################
@@ -705,10 +677,45 @@ END
     local response_code
     curl_call_registry body response_code \
         "co_t_and_c_agreements.json" "${new_tandc_json}"
-    if [ "${response_code}" != "201" ] ; then
-        >&2 echo "ERROR: Unable to create a new Terms & Conditions Agreement for CoPerson ${co_person_id}. Exiting."
-        exit 99
+    check_response_code "${response_code}" "201" \
+        "Unable to create a new Terms & Conditions Agreement for CoPerson ${co_person_id}."
+}
+
+###########################################################################
+# Output original user parameters and the corresponding ACCESS ID.
+# Print to $outfile (global variable) if given, or STDOUT otherwise.
+# Parameters:
+#    firstname - first name of the user
+#    middlename - middle name of the user (can be empty string)
+#    lastname - last name of the user
+#    organization - organization/university of the user
+#    email - email of the user
+#    accessid - ACCESS ID of the user
+###########################################################################
+function output_access_id_for_user {
+    local firstname="$1"
+    local middlename="$2"
+    local lastname="$3"
+    local organization="$4"
+    local email="$5"
+    local accessid="$6"
+
+    if [ -n "${outfile}" ] ; then
+        if [ -n "${firstline}" ] ; then # Append to file after first line
+            printf "%s,%s,%s,%s,%s,%s\n" \
+                "${firstname}" "${middlename}" "${lastname}" \
+                "${organization}" "${email}" "${accessid}" >> "${outfile}"
+        else # Overwrite any existing file for the first line
+            printf "%s,%s,%s,%s,%s,%s\n" \
+                "${firstname}" "${middlename}" "${lastname}" \
+                "${organization}" "${email}" "${accessid}" > "${outfile}"
+        fi
+    else # Print to STDOUT
+        printf "%s,%s,%s,%s,%s,%s\n" \
+            "${firstname}" "${middlename}" "${lastname}" \
+            "${organization}" "${email}" "${accessid}";
     fi
+    firstline="1" # For the first line only, overwrite any existing file
 }
 
 ###########################################################################
