@@ -6,8 +6,9 @@ organization is synced with COmanage Registry on a regular basis so that
 COmanage can display an interactive input textbox to the user.
 
 This list of organizations can be read from the COmanage Registry database.
-Log on to one of the AWS bastion hosts in us-east-2 (Ohio) and run the
-following command.
+Log on to one of the CILogon AWS bastion hosts in us-east-2 (Ohio) and run the
+following command. (You may need to [open an ACCESS Help
+Ticket](https://support.access-ci.org/help-ticket) and ask this be done.)
 
 ```
 mysql -u cilogon_master -p \
@@ -22,5 +23,7 @@ The password for the `cilogon_master` account is stored in the
 The resulting file `/tmp/access_orgs.txt` contains some cruft at the top of
 the file which should be removed before sharing with others.
 
-Organizations can be added to the ACCESS central database by sending a
-help request to support@access-ci.atlassian.net .
+Organizations can be added to the ACCESS central database by
+[submitting a
+request](https://support.access-ci.org/form/organization-request) or by
+sending a help request to support@access-ci.atlassian.net .
