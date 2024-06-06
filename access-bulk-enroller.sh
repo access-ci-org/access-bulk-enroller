@@ -713,7 +713,7 @@ function output_access_id_for_user {
     else # Print to STDOUT
         printf "%s,%s,%s,%s,%s,%s\n" \
             "${firstname}" "${middlename}" "${lastname}" \
-            "${organization}" "${email}" "${accessid}";
+            "${organization}" "${email}" "${accessid}"
     fi
     firstline="1" # For the first line only, overwrite any existing file
 }
@@ -802,7 +802,7 @@ fi
 
 if [ -n "${infile}" ] ; then
     # Read in CSV file to enroll multiple users
-    linecount=1;
+    linecount=1
     while read -r LINE ; do
         # Split line on commas
         IFS=',' read -ra params <<<"${LINE}"
