@@ -2,7 +2,7 @@
 
 This repository contains a scripts to enroll users into an ACCESS COmanage
 Registry using name, organization, and email address. The scripts
-requires `curl`, `jq`, and `dig to be installed. Help is available by using
+requires `curl`, `jq`, and `dig` to be installed. Help is available by using
 the `-h` command line option. 
 
 ## Initial Setup
@@ -11,8 +11,8 @@ This script uses the [COmanage Registry REST API
 v1](https://spaces.at.internet2.edu/display/COmanage/REST+API+v1) and the
 [COmanage Registry Core
 API](https://spaces.at.internet2.edu/display/COmanage/Core+API). To connect
-to these API endpoints, you must create a new API user. You can create as
-many API users as you like. 
+to these API endpoints, you must create a new COmanage API user. You can
+create as many API users as you like. 
 
 To create an API user, log in to the appropriate ACCESS COmanage
 Registry for [DEV](https://registry-dev.access-ci.org/),
@@ -45,7 +45,7 @@ administrator. If logged in as a plaform administrator, select the
    - Expunge on Delete: Unchecked  
    Then click the "ADD" button.
 
-The API User Name and API Key (password) are required to use the
+The API User Name and API Key (password) are required to run the
 `access-bulk-enroller.sh` script. You can specify them via command line
 options `-u` and `-p` or via environment variables `CO_API_USER` and
 `CO_API_PASS`. You will be prompted for them if not otherwise set.
@@ -93,7 +93,7 @@ Options:
     -h Print this help message and quit.
 ```
 
-## Bull Enrollment Script
+## Bulk Enrollment Script
 
 ```
 Usage: ./access-bulk-enroller.sh [options]
