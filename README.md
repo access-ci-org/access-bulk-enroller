@@ -1,9 +1,9 @@
 # ACCESS Bulk Enroller
 
-This repository contains a script to enroll users into an ACCESS COmanage
-Registry using name, organization, and email address. The script
-requires `curl` and `jq` to be installed. Help is available by using the
-`-h` command line option. 
+This repository contains a scripts to enroll users into an ACCESS COmanage
+Registry using name, organization, and email address. The scripts
+requires `curl`, `jq`, and `dig to be installed. Help is available by using
+the `-h` command line option. 
 
 ## Initial Setup
 
@@ -45,12 +45,55 @@ administrator. If logged in as a plaform administrator, select the
    - Expunge on Delete: Unchecked  
    Then click the "ADD" button.
 
-The API User Name and API Key (password) are required to use the script. You
-can specify them via command line options `-u` and `-p` or via environment
-variables `CO_API_USER` and `CO_API_PASS`. You will be prompted for them
-if not otherwise set.
+The API User Name and API Key (password) are required to use the
+`access-bulk-enroller.sh` script. You can specify them via command line
+options `-u` and `-p` or via environment variables `CO_API_USER` and
+`CO_API_PASS`. You will be prompted for them if not otherwise set.
 
-## Running the Script
+## Validation Script
+
+If you are enrolling multiple users with a CSV file, you can validate the
+contents of the CSV file before attempting to run the
+`access-bulk-enroller.sh` script. This will ensure that names, organizations,
+and email addresses all have a valid format.
+
+The input file (`bulk-enrollment.csv` by default) should have lines of the
+following format:
+
+```
+firstname,middlename,lastname,organization,emailaddress
+```
+
+Note that `middlename` can be empty/blank, but all other attributes are
+required.
+
+The `organization` must match one of the Organizations in the ACCESS central
+database. See [ACCESS CI Organizations](access_orgs.md) for more
+information.
+
+```
+Usage: ./validate-csv.sh [options]
+
+Validate a CSV file of users to be bulk-enrolled in ACCESS COmanage
+Registry. This script scans a CSV file and checks each line for possible
+issues. A list of ACCESS Organizations is also needed during validation.
+If the list of ACCESS organizations cannot be found, it will be downloaded
+automatically.
+
+Options:
+    -i <infile> Input CSV file containing a list of users to be enrolled.
+       Defaults to 'bulk-enrollment.csv'. Each line of the file contains
+       firstname,middlename,lastname,organizaton,email address
+       (i.e., user attributes separated by commas).
+    -g <orgfile> File containing the list of ACCESS Organizations, one
+       organization per line. Defaults to 'access_orgs.txt'. If the file
+       is not found, it will be downloaded to the current directory.
+    -o <outfile> Output validation results to a file. Defaults to STDOUT.
+    -v Print additional informational and warning messages to STDERR.
+    -h Print this help message and quit.
+```
+
+## Bull Enrollment Script
 
 ```
 Usage: ./access-bulk-enroller.sh [options]
@@ -90,20 +133,8 @@ If you run the script without any command line options, you will be prompted
 for all information necessary to add a single user to the ACCESS COmanage
 Registry. The resulting ACCESS ID will be printed to STDOUT.
 
-If you want to add multiple users to the ACCESS COmanage Registry, you must
-specify the `-i <infile>` command line option, where `<infile>` is a CSV
-file where each line is of the following format:
-
-```
-firstname,middlename,lastname,organization,emailaddress
-```
-
-Note that `middlename` can be empty/blank, but all other attributes are
-required.
-
-The `organization` must match one of the Organizations in the ACCESS central
-database. See [ACCESS CI Organizations](access_orgs.md) for more
-information.
+To enroll multiple users, specify the `-i <infile>` option with a CSV file
+that has been validated with the `validate-csv.sh` script.
 
 By default, output is to STDOUT. This can be overridden with the
 `-o <outfile>` option. The resulting outfile is a CSV file where each line
