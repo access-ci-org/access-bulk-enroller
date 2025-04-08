@@ -130,7 +130,7 @@ Options:
 ```
 
 If you run the script without any command line options, you will be prompted
-for all information necessary to add a single user to the ACCESS COmanage
+for all information necessary to add a **single user** to the ACCESS COmanage
 Registry. The resulting ACCESS ID will be printed to STDOUT.
 
 To enroll multiple users, specify the `-i <infile>` option with a CSV file
