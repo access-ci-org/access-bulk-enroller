@@ -1,3 +1,8 @@
+name
+(IBM- retired)
+[C]Worthy
+[self]
+*VAIDeB / VANL-UMTS, (SA) (IN)
 2017 NSF Research Experience for Undergraduates
 21Zephyr, Inc.
 3-Dimensional Pharmaceuticals, Inc
@@ -8,12 +13,10 @@
 70885044208
 76 SMXG
 9 Eylul University
-??i h?c Th?y L?i
-?tefan cel Mare University of Suceava
-A*STAR Institute of High Performance Computing
 A.C.Camargo
 A.T. Still University
 a.v.c college of engineering
+A*STAR Institute of High Performance Computing
 AAA
 Aalborg University
 Aalto University
@@ -50,6 +53,7 @@ ACE, Inc
 ACE77 Online Gambling Site
 Acibadem University
 ACM UHD
+ACME AtronOmatic, LLC
 ActionAid International Nigeria
 Active Site Dynamics LLC
 Acton Boxboro High School
@@ -58,6 +62,7 @@ Adams State University
 Adaptive Computing, Inc.
 Adaptive Enterprise Solutions
 Addamax Corporation
+Addax Data Science
 Addenbrookes Hospital
 Addis Ababa University
 Additive Manufacturing Innovations LLC
@@ -65,6 +70,8 @@ Adeco
 Adeco LLC
 Adelaide Women's and Children's Hospital
 Adelphi University
+ADIKA
+Adlin Science
 Adrian College
 ADT
 Advanced Clustering Technologies, Inc.
@@ -91,6 +98,7 @@ Agnes Scott College
 Agogo Inc
 Agouron Institute
 Agouron Pharmaceuticals, Inc.
+AgReliant Genetics
 Agricultural Information Institute of CAAS
 Agricultural Research Center
 Agricultural Research Council
@@ -99,7 +107,9 @@ Agriculture and Agri-Food Canada
 AGT
 Ahmadu Bello University
 Ahmedabad University
+AI Betting Edge
 AI Helix
+AI Institute for Artificial Intelligence and Fundamental Interactions (IAIFI)
 Aid Organization
 Aightwave
 AIMdyn Inc.
@@ -113,9 +123,11 @@ Aix-Marseille University
 Ajou University
 Akdeniz University
 Akwa Ibom State University
+Al Akhawayn University
 Al Azhar University assiut branch
 Al Azhar University of Indonesia
 Al Hussein Technical University
+Al Neelain University
 Al salama Tech
 Al-auds
 Alabama A&M University
@@ -131,6 +143,7 @@ Albaha Univetsity
 Albany College of Pharmacy and Health Sciences
 Albany Medical College
 Albany State University
+Albaydha University
 Albemarle
 Albert Einstein College of Medicine
 Albion College
@@ -153,6 +166,7 @@ Algoritics
 Aliah University
 Alice Lloyd College
 Aligarh Muslim University
+Alivexis
 All four won
 All India Institute of Medical Sciences - New Delhi
 All Nations University College
@@ -175,8 +189,10 @@ Alpha Data Parallel Systems
 Altair Engineering, Inc.
 AltaSeads Conservancy
 Alvernia University
+Alvin Community College
 Amazon
 Amazon Web Services / UCL
+Amboseli Baboon Research Project
 Amdocs
 AMERICA CUBED
 American Airlines, Inc.
@@ -185,6 +201,7 @@ American Chemical Society
 American College of Radiology
 AMERICAN CYANAMID
 American Indian Higher Education Consortium
+American Mathematical Society
 American Museum of Natural History
 American Physical Society
 AMERICAN PROPULSION INST
@@ -197,6 +214,7 @@ Ames Laboratory
 Amherst College
 Amicinda
 Amirkabir
+Amirkabir University of Technology
 Amity Regional High School
 Amity university Jaipur Rajasthan
 AMITY UNIVERSITY MUMBAI
@@ -228,6 +246,7 @@ Anne Arundel Community College
 Annenberg School for Communication
 Anoka High School
 Anselmo-Merna High School
+Answer ALS
 ANSYS, Inc.
 Antennas Research Group ARG - NfP AoI
 Anthropic
@@ -237,6 +256,7 @@ Apex-Brasil
 APHL
 Apogee Research, LLC
 Apollo-Ridge High School
+Apollodyne
 Appalachian State University
 Appentra, Inc.
 Appetency Recruitment
@@ -258,6 +278,7 @@ Arcadia University
 ARCADIS
 Arctic Region Supercomputing Center
 Arcutek Corporation
+Arden University
 AreandDee LLC
 Arena Pharmaceuticals, Inc.
 Argiope Technical Solutions
@@ -282,6 +303,7 @@ Arvae Systems
 AS&M
 Asahi Kasei Corp.
 Asbury University
+Ashesi University
 Ashford University
 Ashland University
 Ashley Austin Trading
@@ -306,12 +328,14 @@ Atmospheric Technology Services Company
 Atos
 Atrimed Pharmaceuticals Pvt. Ltd
 Atrium Health
+ATTMOS Inc.
 Auburn
 Auburn City School District
 Auburn University
 Auburn University at Montgomery
 AUC Woodruff Library
 AUCC
+Auckland University of Technology
 Augsburg University
 Augusta University
 Augustana College
@@ -361,6 +385,7 @@ BAERi
 Bahauddin Zakariya University
 Bahauddin Zakariya University, Multan
 Baker Hughes
+Baku Higher Oil School
 Baldwin High School
 Baldwin-Whitehall High School
 Ball State University
@@ -385,6 +410,7 @@ Barrow Neurological Institute
 Bartol Research Institute
 bartrom medical imaging
 Baruch College
+Baruch S. Blumberg Institute
 BASF Corporation
 BASIS Tucson North
 Bates College
@@ -403,6 +429,7 @@ Baylor University
 Bayonne High School
 BBG Incorporated
 BCBSM
+BCMaterials
 BCSRC
 Bechtel Corporation
 Bechtel Marine Propulsion Corporation
@@ -416,6 +443,7 @@ Beijing Forestry University
 Beijing Institute of Technology
 Beijing Normal University & Hong Kong Baptist University United International College
 Beijing Union University
+Beijing University of Chemical Technology
 Beijing University of Civil Engineering and Architecture
 Beijing University of Posts and Telecommunications
 Belarusian State University
@@ -426,17 +454,20 @@ Bells University of Technology
 Belmont University
 Bemidji State University
 Ben-Gurion University of the Negev
+Benedict College
 Benedictine College
 Benedictine University
 benemerita universidad autonoma de puebla
 Benet Laboratories
 Bengolian Trade International
+Beni-Suef University
 Bennington College
 Benson High School
 Bentley University
 Berea College
 Berean Academy
 Bergen community College
+Berkeley College
 BERLEX LABS
 Berlin Institute of Technology
 Berry College
@@ -456,6 +487,7 @@ Biocept, Inc.
 BioChemCore
 BioClarity AI
 BioCurious
+Biodiversity Research Institute
 biogenea
 BioHybrid Solutions
 BIOINFORES
@@ -524,6 +556,7 @@ Brandeis University
 Brazilian Agricultural Research Corporation
 Brazilian Center for Physics Research
 Brazilian Ministry of Health - CMIND/SAES
+Brazosport College
 Brentwood Academy
 Brentwood High School
 Brera Astronomical Observatory
@@ -533,6 +566,7 @@ Brigham and Women's Hospital, Boston
 Brigham and Womens' hospital
 Brigham Young University
 Brigham Young University - Idaho
+Bristol Myers Squibb
 British Columbia Cancer Agency
 British Columbia Institute of Technology
 British Petroleum
@@ -563,6 +597,7 @@ Build Well Labs.
 Bulgarian Academy of Sciences
 BULL
 Buncombe County Schools - TC Roberson High School
+Bundesanstalt für Gewässerkunde (Federal Institute of Hydrology)
 Bunker Hill Community College
 Bunker Labs
 Bureau of Geological and Mining Research
@@ -595,6 +630,7 @@ Calexo
 California Academy of Sciences
 California Air Resources Board
 California Baptist University
+California Botanic Garden
 California Department of Food and Agriculture
 California Department of Health Services
 California Department of Public Health, Richmond
@@ -643,6 +679,7 @@ Candor High School
 Cape Fear Community College
 Capgemini Engineering
 Capital University
+Capitol Technology University
 Captain John L. Chapin High School
 Carbon to Sea Initiative
 CarbonPlan
@@ -696,9 +733,11 @@ Centenary University
 Centennial High School
 Center for Advanced Research in Biology
 Center for Advanced Studies, Research and Development in Sardinia
+Center for AI Safety
 Center for Applied Coastal Research
 Center for Applied Systems and Software (CASS)
 Center for Development of Advance Computing
+Center for Discovery and Innovation, Hackensack Meridian Health
 Center for Energy, Environmental and Technological Research
 Center for Environmental and Toxicological Research
 Center for Iron and Steelmaking Research
@@ -714,6 +753,7 @@ Center for Scientific Research and Higher Education
 Center for Severe Weather Research
 Center for Transportation Research
 Center of Logistics and Expertsystems
+Center of Molecular Immunology
 Center17
 CenterPoint Energy
 Centers for Disease Control and Prevention
@@ -742,6 +782,7 @@ Centre for Coastal Palaeoscience
 Centre for Development of Advanced Computing
 Centre for Genomic Regulation (CRG)
 Centre for High Performance Computing
+Centre for High Performance Computing SA
 Centre for Interdisciplinary Nanoscience at Marseille
 Centro de Desenvolvimento de Tecnologia Nuclear CDTN/CNEN
 Centro de Investigaciones Biologicas del Noroeste SC
@@ -776,10 +817,12 @@ Charotar University of Science and Technology (CHARUSAT)
 Chatham University
 Chaudhary Charan Singh University Meerut
 CHDI Foundation
+Cheetah Conservation Fund
 Chelsea High School
 CHEMICAL DESIGN
 CHEMICAL DYNAMICS
 Chemical engineering
+Chesapeake Math & IT Academy
 Chester University
 Chestnut Hill College
 Chevron Corporation
@@ -821,6 +864,7 @@ Christian Heritage
 Christian-Albrechts-University to Kiel
 Christopher Newport University
 Chuahai Zhang
+Chuiko Institute of Surface Chemistry
 Chungbuk National University
 Chungnam National University
 Chuo Ku
@@ -830,6 +874,9 @@ CICATA National Polytechnique Institute
 CIMH
 Cincinatti
 Cincinnati Children's Hospital Medical Center
+Cinvestav Merida
+Cinvestav Queretaro
+Cinvestav Zacatenco
 CIQA
 CIRMF
 Cisco Systems, Inc.
@@ -864,20 +911,23 @@ Clayton State University
 Clear Lake High School
 ClearSign Cumbustion
 Clemson University
-Cleveland Chiropractic College
 Cleveland Clinic
 Cleveland State University
+Cleveland University - Kansas City
 Clifford A Jacobs Consulting, LLC
 Clifton, Fine Central School
 Climate Central
 Clinton College
 CloudBank
 Cloudphysician Healthcare
+CLR Analytics Inc
 CME Group Foundation Business Analytics Lab
 CMR Technical Campus
 CMS Consulting, Inc.
 CNM
 CNRS - University of Montpellier
+Coalinga College
+Coalition for Academic Scientific Computation (CASC)
 Coastal Alabama Community College
 Coastal Carolina University
 Coastal Computing Services, LLC
@@ -941,12 +991,13 @@ Computervision R&D Pvt. Ltd.
 COMSATS
 COMSATS university islamabad
 CONACYT - Instituto Nacional de Enfermedades Respiratorias Ismael Cosío villegas
-Concordia University
 Concordia University Chicago
+Concordia University Irvine
 Concordia University Wisconsin
 Conduit Computing
 Conerly & Associates, SP
-Công ty TNHH C?u ???ng 5
+Công ty TNHH Cầu Đường 5
+Conifer Point Pharmaceuticals
 Conmergence
 Connecticut Agricultural Experiment Station
 Connecticut College
@@ -961,6 +1012,7 @@ Consultant
 Continued Education
 Continuum Analytics
 Contra Costa College
+Contramont Research
 Convergent communication india pvt ltd
 Coon Rapids High School
 Cooper Union College
@@ -970,7 +1022,9 @@ Copenhagen University Observatory
 COPPE/UFRJ
 Coppin State University
 COPRO
+Corban University
 Core Scientific
+Cornell High Energy Synchrotron Source
 Cornell University
 Cornell University Center for Advanced Computing
 Corning Incorporated
@@ -1001,7 +1055,9 @@ Creighton University
 Crescent Counties Foundation for Med Car
 CRIANN
 CRMJetty
+Crooms Academy of Information Technology
 crr
+CSC - IT Center for Science
 Cshelp Inc.
 CSIC-UPV
 CSIR-CLRI
@@ -1043,6 +1099,7 @@ Curtin University
 Curtiss-Wright Corporation
 customsoft
 CustomWeather, Inc.
+CVPath Institute
 CVR College of Engineering
 CWI - College of Western Idaho
 Cwordsworth
@@ -1064,13 +1121,16 @@ D. Nelson Limber Memorial Observatory
 D.E. Shaw Research
 D.Y.Patil University
 D.Y.Patil University  School of Biotechnology and Bioinformatics
+D'Annunzio University of Chieti-Pescara
 D3 Technologies
 Daedalus
 Daemen University
+Đại học Thủy Lợi
 Daikin Applied
 Dakota State University
 Dalhousie University
 DALLAS ID ASSOCIATES
+Dalton State College
 Damanhour University
 Dana-Farber Cancer Institute
 Daniel J. Gross High School
@@ -1082,8 +1142,10 @@ Dascena
 Dassault Systemes SIMULIA Corp.
 Dassault Systems
 Data Machines Corp.
+Databricks,  Inc.
 DATABYTE TECHNOLOGIES
 DataDirect Networks
+DataEndure
 Dataever Consulting
 DataRobot
 Dauphin Island Sea Lab
@@ -1141,6 +1203,7 @@ Dine College
 dingli
 Direct Electron, LP
 Discos
+Discovery Partners Institute
 Diversity Arrays Technology
 Dixie State University
 DJSCE Dwarkadas Jivanlal Sanghvi
@@ -1159,9 +1222,11 @@ Dongnam Institute of Radiological and Medical Sciences
 Donnelley Financial Solutions
 Donostia International Physics Center
 Dordt College
+dormakaba
 DorothyAI
 Dorr-Oliver Company
 Dot.Net
+Dougherty Valley High School
 Dow AgroSciences LLC
 Dow Chemical Company
 Dow Corning
@@ -1194,12 +1259,13 @@ DXC
 DY Patil University
 Dynamic Technology Inc
 Dynamix Technologies
-E&S Environmental Chemistry, Inc.
 E-Systems - Garland
 E. I. du Pont de Nemours and Company
+E&S Environmental Chemistry, Inc.
 E3 Alliance
 EAFIT University
 Earlham College
+Earlham Institute
 EarlyDiagnostics
 Earth and Space Research
 EarthScope Consortium
@@ -1213,6 +1279,7 @@ East Tennessee State University
 East West University
 Eastern Connecticut State University
 Eastern Illinois University
+Eastern Kentucky University
 Eastern Mediterranean University
 Eastern Michigan University
 Eastern New Mexico University
@@ -1226,12 +1293,14 @@ Eckerd College
 Ecole des Ponts ParisTech
 Ecole Normale Supérieure
 Ecole Normale Superieure De Lyon
+Ecole polytechnique
 Ecole Polytechnique de Montreal
 Ecological Research Society
 Econometric Modeling and Computing Corporation
 Economic Policy Institute
 Ecotrust
 ECS Federal
+Eden Geopower, Inc.
 Edinboro University of Pennsylvania
 Edinburgh Napier University
 Edison Senior High School
@@ -1239,6 +1308,7 @@ EDM Data srl
 Edmond Santa Fe High School
 Educational Testing Service
 Eduworks, Inc
+Edward Via College of Osteopathic Medicine
 Edx
 EG&G
 Ege University
@@ -1254,7 +1324,7 @@ Eldorado High School
 Eldorado Research Institute
 Eleanor Roosevelt High School
 Electronics and Telecommunications Research Institute
-Elektrotehni?ka škola
+Elektrotehnička škola
 EleutherAI
 Eli Lilly and Company, (IVAC)
 ELI-NP
@@ -1280,6 +1350,7 @@ Emory & Henry College
 Emory University
 EMPA Material Science and Technology
 EMPACT-AI
+Empulse Global
 EMU
 Endicott High School
 Endurance
@@ -1292,6 +1363,7 @@ Engineering Institute
 Enig Associates, Inc.
 ENSAM
 ENSCO, Inc.
+Enterprise Data Template
 Enviro Engineering, Inc.
 Environment and Climate Change Canada
 Environment Canada
@@ -1312,7 +1384,7 @@ Erie Community College
 Escuela Politecnica Nacional
 ESI US R&D
 ESIEE
-Eski?ehir Technical University
+Eskişehir Technical University
 ESnet
 ESO
 ESPN
@@ -1338,9 +1410,11 @@ Ev4
 Evans City Elementary School
 Evanston Township High School
 Everest Consulting Group
+Everett Community College
 Evergreen State College
 Everis
 Everyday health group
+Evonik
 Ewha Womans University
 Exa Corporation
 Executive Office of the President
@@ -1362,6 +1436,7 @@ Faculty of Informatics, University of Debrecen
 Faculty of Natural Sciences and Engineering, Ljubljana
 Faculty of physics, Belgrade University, Serbia
 Faculty of Sciences in Rabat
+Faculty of Sciences of Gafsa
 Faculty of Sciences of the University of Lisbon
 Faculty of Sciences of Tunis
 Faculty of Technical Sciences Novi Sad
@@ -1384,6 +1459,7 @@ Fayoum University
 FCT-UNL
 FDA/NCTR
 Federal Deposit Insurance Corporation
+Federal Institute of Hydrology (BfG)
 Federal Reserve Bank of Atlanta
 Federal Reserve Bank of Chicago
 Federal Reserve Bank of Dallas
@@ -1426,6 +1502,7 @@ Federal University of Technology, Minna
 Federal University of Uberlandia
 Federal University of Uberlândia
 Federico Santa Maria Technical University
+Feel It LLC
 Fehrer
 Feinberg School of Medicine
 Ferderal University of Santa Catarina - UFSC
@@ -1491,8 +1568,10 @@ Fox Chase Cancer Center
 Fp Complete
 Fractal Therapeutics
 Francis Marion University
+Francis Parker School
 Franciscan University of Steubenville
 Francisco José de Caldas District University
+Frankfurt School of Finance and Management
 Franklin and Marshall College
 Franklin College
 Franklin Middle School
@@ -1504,7 +1583,7 @@ FraudScope, Inc.
 Fraunhofer Institute for High Frequency Physics and Radar Techniques
 Fraunhofer Institute for Industrial Mathematics
 FRBNY
-Fred Hutchinson Cancer Research Center
+Fred Hutchinson Cancer Center
 Frederick National Laboratory
 Frederick National Laboratory for Cancer Research
 Free Likes Club
@@ -1529,6 +1608,7 @@ Fulcrum Worldwide
 Fullerton College
 Fundação Oswaldo Cruz (Fiocruz)
 Fung Institute
+FURB - Universidade Regional de Blumenau
 Furman University
 Further Technologies
 Fusion Petroleum Tecnologies, Inc.
@@ -1536,6 +1616,7 @@ FutureGrid
 Fuzhou University
 FY130104
 G S Science, Arts & Commerce College, Khamgaon
+G-Research
 G.E.S
 Gadjah Mada University
 Galileo Analytics LLC
@@ -1554,6 +1635,7 @@ GDIT
 GE
 ge aviation
 GE Healthcare
+GE Vernova
 Gebze Institute of Technology
 Gebze Technical University
 GenCorp
@@ -1577,6 +1659,7 @@ GeoOndas Ltda.
 Geophysical Fluid Dynamics Institute
 Geophysical Institute of Peru
 GeoQuest International
+George Fox University
 George Mason University
 George Washington High School
 George Washington University
@@ -1598,6 +1681,7 @@ Geosoft Inc
 GeoWing
 German Aerospace Center
 German Cancer Research Center
+German Center for Neurodegenerative Diseases
 German Climate Computing Center
 German Electron Synchrotron
 German Jordanian University
@@ -1617,6 +1701,8 @@ Global inc
 Global Technology Resources, Inc.
 Globus
 Gloo, LLC
+Gloucester Marine Genomics Institute
+GLS University
 GNS Science
 Goethe University Frankfurt
 Golden Gains, Inc.
@@ -1630,8 +1716,12 @@ Gordon State College
 Gorge Mason
 Goshen College
 GOULD
+Government Brennen College
+Government College Women University Faisalabad
+Governmental Agency for IT development - KIFÜ
 Governor's School of Engineering & Technology
 Governors State University
+Gozunga
 Graduate Student
 Grambling State University
 Gran Sasso Science Institute
@@ -1666,6 +1756,7 @@ GSFC University
 GSI Helmholtz Centre for Heavy Ion Research GmbH
 GSU Panther Hackers
 Guam Community College
+Guangxi University for Nationalities
 Guiderland High School, Guiderland Ctr
 Gulbarga University
 Gundarma University
@@ -1673,8 +1764,10 @@ Guru Nanak Dev University
 Gwangju Institute of Science and Technology
 Gyeongsang National University
 HAASZ
+Hacettepe University
 HackerOne, San Francisco
 Hagerstown Community College
+Hainan University
 Halliburton
 Hamad Bin Khalifa University
 Hamburg University of Technology
@@ -1689,10 +1782,12 @@ Hanoi University of Science and Technology
 Hanover College
 Hanyang University
 Hapticmedia
+Harbin Engineering University
 Harbin Institute of Technology
 harbor ucla
 Harding University
 Harding University High School
+Harker School
 Harley S&T
 Harris-Stowe State University
 Harrisburg University
@@ -1709,6 +1804,7 @@ Hastings High School
 Hauptman-Woodward Medical Research Institute
 Haverford College
 Hawaii Pacific University
+Hazara University
 HCC
 HCL America Inc. - Sunnyvale
 HCL Technology
@@ -1746,6 +1842,7 @@ HERCULES INC
 Heriot-Watt University
 Heritage Institute of Technology
 Heritage School
+Hertfordshire University
 Herzing University - Atlanta
 Hewlett Packard
 Hewlett Packard Enterprise
@@ -1753,6 +1850,7 @@ Hi-tech Technology Transfer institute
 Hibbitt-Karlsson-Sorensen
 High - Performance Computing Center
 High Energy Accelerator Research Organization
+High Performance Computing Nepal (HPCNepal)
 High Performance Technologies, Inc.
 High Point University
 High Tech High San Diego
@@ -1760,6 +1858,7 @@ Highland Community College
 Highland High School
 Highland Light Management
 Highview Alternative
+Hill College
 Hillsdale College
 Hilsman Middle School
 Hindustan Institute of Technology and Science
@@ -1827,6 +1926,7 @@ Hudson Valley Community College
 Hugging Face
 Hughes Aircraft
 Hugo Americas
+Human Rights Data Analysis Group
 Humboldt State University
 Humboldt University of Berlin
 Hunan University
@@ -1903,6 +2003,7 @@ Illinois College
 Illinois Institute of Technology
 Illinois Math and Science Academy
 Illinois Natural History Survey
+Illinois State Archaeological Survey
 Illinois State Geological Survey
 Illinois State University
 Illinois State Water Survey
@@ -1915,6 +2016,7 @@ Ilsan Hospital
 IM Flash Technologies
 IM Systems Group, Inc.
 IMAU, Utrecht University
+IMDEA Materials
 IMDEA-Nanociencia
 IMEC International
 Immune Tolerance Network
@@ -1976,14 +2078,14 @@ Indiana University of Pennsylvania
 Indiana University School of Education
 Indiana University South Bend
 Indiana University Southeast
-Indiana University, Bloomington
-Indiana University, Kokomo
 Indiana University-Purdue University Fort Wayne
 Indiana University-Purdue University Indianapolis
+Indiana University, Bloomington
+Indiana University, Kokomo
 Indiana Wesleyan University
 Indira Gandhi Centre for Atomic Research
 Indira Gandhi Krishi Vishwavidyalaya Raipur INDIA
-Individual/Unaffiliated
+Individual / Unaffiliated
 IndNav Labs
 Indonesia University of Education
 Indonesian Aerospace
@@ -2012,8 +2114,11 @@ INRS
 INSA of Rouen
 INSEAD
 Insilico Medicine Hong Kong Ltd.
+Institución Universitaria Colegio Mayor de Antioquia
+Institut Curie
 Institut d’Astrophysique de Paris
 Institut national de la recherche scientifique
+Institut National des Postes et Telecommunications
 Institut Pasteur
 Institut Pasteur Morocco
 Institute for Advanced Computational Science at Stony Brook University
@@ -2068,10 +2173,10 @@ Institute of Nuclear Physics PAN
 Institute of Ocean Sciences
 Institute of Oceanology Polish Academy of Sciences
 Institute of Organic Chemistry of the National Academy of Sciences of Ukraine
-Institute of Paper Science and Technolog
 Institute of Physics Belgrade
-Institute of Physics, Chinese Academy of Sciences
 Institute of Physics- National University of Rosario
+Institute of Physics, Chinese Academy of Sciences
+Institute of Physics, Ministry of Science and Education, Republic of Azerbaijan
 Institute of Science and Technology Austria
 Institute of Semiconductor Physics
 Institute of Software Chinese Academy of Sciences
@@ -2080,6 +2185,7 @@ Institute of Supramolecular Science and Engineering
 Instituto Agronômico de Campinas
 Instituto Butanta
 Instituto de Aeronáutica e Espaco
+Instituto de Astrofísica de Andalucía (IAA-CSIC)
 instituto de ecología
 Instituto de Medicina Molecular
 Instituto Federal do Ceará
@@ -2087,10 +2193,12 @@ Instituto Federal do Piauí
 Instituto Superior Tecnico
 Instrumental, Inc.
 INTEC
+Integral Consulting, Inc.
 Integral Technologies, Inc.
 Integrated DNA Technologies, Inc.
 Integrated Networks Corp.
 Integrated Statistics
+Integrated Weather Research and Forecasting Framework
 Intel Corporation
 Intelligent Automation, Inc.
 Intelligent Light, Inc.
@@ -2113,6 +2221,7 @@ International Centre for Theoretical Physics
 International Centre of Insect Physiology and Ecology
 International Computer Science Institute
 International Food Policy Research Institute
+International Institute for Applied Systems Analysis (IIASA)
 International Institute of Information Technology, Hyderabad
 International Institute of Molecular and Cell Biology
 International Maize and Wheat Improvement Center
@@ -2122,6 +2231,7 @@ International Potato Center
 International Rice Research Institute
 International School for Advanced Studies
 International Scientific-Educational Center of the National Academy of Sciences of Republic of Armenia
+International University of Rabat
 Internet Tours
 Internet2
 Intracoastal Consultants, LLC
@@ -2177,6 +2287,7 @@ ITU
 IUB
 IUT
 IUTTD
+Ivy Tech
 Izmir Institute of Technology
 J Craig Venter Institute
 J Heyrovsky Institute of Physical Chemistry
@@ -2228,12 +2339,15 @@ Jilin University
 Jinan University
 JMM TECH
 JNL Scientific
+Johannes Kepler University Linz
 John A. Burns School of Medicine
 John Adams High School
 John Brown University
 John Carroll University
 John Centre
+John Deere
 John Innes Centre
+John P. Stevens High School
 John Radcliffe Hospital
 John von Neumann Institute for Computing
 John Wayne Cancer Institute
@@ -2249,6 +2363,7 @@ Johnson Controls, Inc.
 Johnson High School
 Johnson State College
 Joint Genome Institute
+Jomo Kenyatta University of Agriculture and Technology
 Jones Research
 Joseph Fourier University
 Jozef Stefan Institute
@@ -2260,6 +2375,7 @@ Julich Supercomputing Centre
 Juniata College
 Juntendo University
 JusticeDAO
+KAI Media
 Kalamazoo College
 Kamnoetvidya Science Academy
 Kannur University
@@ -2275,6 +2391,7 @@ Karunya Institute of Technology and Sciences
 Kasetsart University
 Kathmandu University
 KATO BIO NORUM
+Kautex
 Kazan Federal University
 KBR
 KCC
@@ -2300,6 +2417,7 @@ Kettering College
 Kettering Unversity
 Keysight
 Keysight Technologies
+KeystoneREN
 khajeh nasir toosi university of technology
 khbhjhj
 Khon Kaen University
@@ -2326,6 +2444,7 @@ Klu.ai
 KMS Fusion, Inc.
 knowledge Sharing Campaig
 knowledge Sharing Campaign
+KnowledgeVis, LLC
 Knox College
 Kobe University
 Koc University
@@ -2340,6 +2459,7 @@ Korea Advanced Institute of Science and Technology
 Korea Astronomy and Space Science Institute
 Korea Economic Research Institute
 Korea Institute for Advanced Study
+Korea Maritime & Ocean University
 Korea University
 Korean Institute of Science and Technology Information
 Kotelawala Defence University
@@ -2360,17 +2480,19 @@ Kuwait University
 Kwame Nkrumah University of Science and Technology
 Kwangwoon University
 Kyambogo University
+Kyäni
 Kyoto University
 Kyungpook National University
 Kyushu Institute of Technology
 Kyushu University
-Kyäni
 L
 L & L Products, Inc.
+L'école Nationale Supérieure d'Informatique pour l'Industrie et l'Entreprise
 L&T Technology Services
 L2 Technologies
 L3 Scientific Applications Consulting
 L3 Scientific Applications Consulting LLC
+L3Harris Technologies
 La Jolla Bioengineering Institute
 La Jolla Institute
 La Jolla Institute for Immunology
@@ -2433,6 +2555,8 @@ Lehmann Center
 Leibniz Institute for Analytical Sciences - ISAS
 Leibniz Institute for Astrophysics Potsdam
 Leibniz Institute for Natural Product Research and Infection Biology
+Leibniz Institute for Neurobiology
+Leibniz Institute for Zoo and Wildlife Research
 Leibniz Supercomputing Center
 Leibniz Supercomputing Centre
 Leibniz-Insitut für Astrophysik Potsdam
@@ -2447,14 +2571,17 @@ LeTourneau University
 Lewis and Clark
 Lewis and Clark College
 Lewis University
+LexisNexis
 Lexmark
 Lezval Limited
 LG Display
 Liberal Arts and Science Academy
 Liberty University
 Lieber Institute for Brain Development
+Lift And Shift Foundation
 Ligand Pharmaceuticals, Inc.
 Ligandal
+LIGO/Virgo/KAGRA Collaboration
 Lina Bioscience
 Linaro
 Lincoln Land Community College
@@ -2474,6 +2601,7 @@ Lipscomb University
 Liqid Inc.
 Liquid Crystal Institute
 Livermore Software Technology Corporation
+Liverpool John Moores University
 Livingstone College
 lizfeeneytllc@yahoo.com
 LMI
@@ -2503,6 +2631,7 @@ Los Alamos National Laboratory
 Los Angeles Biomedical Research Institute
 Los Angeles County Department of Mental Health
 Los Angeles County Department of Public Health
+Los Angeles Pierce College
 Loughborough University
 Louisiana Coastal Protection & Restoration Authority
 Louisiana Coastal Protection and Restoration Authority (CPRA)
@@ -2523,6 +2652,7 @@ LPSC
 LPU Phagwara
 LSU Center for Computation and Technology
 LSUHSC
+LUANAR
 Ludwig Maximilian University of Munich
 Lunar and Planetary Institute
 Lunar and Planetary Laboratory
@@ -2531,7 +2661,6 @@ Lurie Children's Hospital
 Lussier Lab
 Luther College
 Lycoming College
-Lynchburg College
 M/A-COM Linkabit
 Macalester College
 Mackenzie
@@ -2542,6 +2671,7 @@ MADAR Consuilting
 Madras Christian College
 Mae Fah Luang University
 Magee-Womens Research Institute
+Magna Graecia University of Catanzaro
 MAGNA International
 Magna Software
 Magnes Collection of Jewish Art and Life at the Bancroft Library
@@ -2608,6 +2738,7 @@ Max Planck Institute for Dynamics and Self-Organization
 Max Planck Institute for Dynamics of Complex Technical Systems
 Max Planck Institute for Evolutionary Biology
 Max Planck Institute for Gravitational Physics (Albert Einstein Institute)
+Max Planck Institute for Informatics
 Max Planck Institute for Medical Research
 Max Planck Institute for Meteorology
 Max Planck Institute for Physics
@@ -2680,6 +2811,7 @@ Messiah College
 Meta-Software
 Metadata Game Changers
 MetaMeta LLC
+Methodist University
 Metro ECSU
 Metropolitan Autonomous University
 Metropolitan School District of Wayne Township
@@ -2705,12 +2837,15 @@ Micrsosoft
 Middle East Technical University
 Middle Tennessee State University
 Middlebury College
+Midlands State University
 Midwestern State University
 Midwestern University - Arizona
+Miller Robotics
 Millersville University of Pennsylvania
 Milligan College
 Millikin University
 Milwaukee School of Engineering
+Milwaukee Tool
 Mindmajix technologies
 Mindmajix Technologies INC
 Minneaolis South
@@ -2754,6 +2889,7 @@ Modulus Discovery
 Moffatt & Nichol
 Moffett Systems
 Moffitt Cancer Center
+Mohamed Boudiaf University of M'Sila
 Mohammed VI Polytechnic University
 MOI'S BRIDGE COMMUNITY WELFARE ASSOCIATION
 MOLDFLOW
@@ -2796,12 +2932,16 @@ Moscow State University
 mosquito scientists
 Moss Landing Marine Laboratories
 Mostaganem University - ABD EL HAMID IBN BADIS
+Mote Marine Laboratories
+Mote Marine Laboratory and Aquarium
 Motorola Mobility LLC
+Mouloud Mammeri University of Tizi Ouzou
 Mount Holyoke College
 Mount Lebanon High School
 Mount Mercy College
 Mount Saint Mary College
 Mount Sinai Medical Center
+Mount St. Mary's University
 Mount Stromlo Observatory
 Mount Union University
 Mount Vernon Nazarene University
@@ -2844,6 +2984,7 @@ Nagaland University
 Nagoya University
 NAGPUR UNIVERSITY
 NANA
+NANGUI ABROGOUA University
 Nanjing University
 Nankai University
 nanobio.md
@@ -2869,6 +3010,8 @@ National Aeronautics and Space Administration
 National Aeronautics and Space Administration Headquarters
 National Agency for New Technologies, Energy and Sustainable Economic Development
 National Agricultural Genome Program
+National Agricultural Technology Institute
+National Antarctic Scientific Center of Ukraine
 National Astronomical Observatory of Japan
 National Astronomy and Ionosphere Center
 National Atomic Energy Commission
@@ -2878,7 +3021,6 @@ National Brain Research Centre
 National Bureau of Economic Research
 National Cancer Institute
 National Center for Atmos. Research
-National Center for Atmospheric Research
 National Center for Biotechnology Information
 National Center for Computational Sciences
 National Center for Genome Analysis Support (NCGAS)
@@ -2890,11 +3032,13 @@ National Center for Research in Energy and Materials
 National Center for Supercomputing Applications
 National Center for Toxicological Research
 National Centers for Environmental Prediction
+National Central University
 National Centre for Biological Sciences
 National Centre for Disease Informatics and Research
 National Centre for Medium Range Weather Forecasting
 National Centre for Scientific Research
 National Cheng Kung University
+National Chi Nan University
 National Chiao Tung University
 National Computer Center of Higher Education
 National Ecological Observatory Network
@@ -2903,6 +3047,7 @@ National Energy Research Scientific Computing Center
 National Energy Technology Laboratory
 National Geodetic Survey
 NATIONAL GEOSPATIAL-INTELLIGENCE AGENCY
+National Graphene Research and Development Center LLC
 National Hansen's Disease Program
 National Heath Research Insitutues
 National Hellenic Research Foundation
@@ -2930,6 +3075,7 @@ National Institute of Animal Nutrition and Physiology
 National Institute of Environmental Health Science
 National Institute of Health
 National Institute of Health Dr. Ricardo Jorge
+National Institute of Immunology
 National Institute of Laser, Plasma and Radiation Physics
 National Institute of Mental Health
 National Institute of Oceanography and Experimental Geophysics (OGS)
@@ -2947,6 +3093,7 @@ National Institute of Technology Trichy
 National Institute of Technology Warangal
 National Institute of Technology, Puducherry
 national institute of technology, tokyo college
+National Institutes for Quantum Science and Technology
 National Institutes of Health
 National Institution of M.C. Research
 National Laboratory for Cientific
@@ -2959,6 +3106,7 @@ National Nuclear Energy Agency of Indonesia
 National Observatory
 National Oceanic and Atmospheric Administration
 National Oceanographic and Atmospheric Administration
+National Oceanography Centre
 National Optical Astronomy Observatory
 National Optical-Infrared Astronomy Research Laboratory
 National Park College
@@ -3009,6 +3157,7 @@ Natural History Museum, London
 Natural History Museum, Vienna
 Natural Resources Canada
 Nature
+Nature Venture
 Nauset Public Schools
 Naut Inc
 NAVAIR FRCE
@@ -3130,6 +3279,7 @@ Norfolk State University
 Norheastern State
 Norheastern University
 Normal Community High School
+Normal Life of Indiana
 Norman High School
 North Allegheny High School
 North Allegheny Intermediate School
@@ -3168,6 +3318,7 @@ Northern Golf Institute (NGI)
 Northern Illinois University
 Northern Kentucky University
 Northern Marianas College
+Northern Michigan University
 Northern Virginia Community College
 Northland College
 Northrop Grumman Corporation
@@ -3198,6 +3349,7 @@ Novatek, Inc.
 Novation Technology
 NOVEL TECHSCIENCES (OPC) PRIVATE LIMITED
 Novorient Sdn Bhd
+NSF National Center for Atmospheric Research
 NSF’s National Optical-Infrared Astronomy Research Laboratory
 Nth Opinion
 NTT Data Corporation
@@ -3221,6 +3373,7 @@ Oak Ridge National Laboratory
 Oakland Catholic High School
 Oakland CUSD #5
 Oakland University
+Oakton College
 Oakwood University
 Obafemi Awolowo University
 Oberlin College
@@ -3234,6 +3387,7 @@ Octapharma
 Office of Atomic Energy, Bruyeres-Le-Chatel
 Office of Atomic Energy, Saclay
 Office of Naval Research
+Office of the Director of National Intelligence
 OFR
 Oglethorpe University
 Ohio Health Department
@@ -3259,14 +3413,18 @@ Oklahoma State University/XSEDE Empower
 OLCF
 Old Dominion
 Old Dominion University
+Olds Research
 Olivet College
 Olivet Nazarene University
 olivet university
+Olohana Foundation
 OLP
 Olympian   HS
 Omaha North High
 OMES
+Omnibond Systems
 OMNIBUS
+OmniSense Surgical
 Omnitron Biosciences
 ON
 ON Semiconductor
@@ -3277,7 +3435,6 @@ Onondaga Community College
 Ontario Institute for Cancer Research
 Ontario Tech University
 OPCODE
-Open Science Grid
 open science org
 Open Storage Network
 Open University of Sri Lanka
@@ -3304,6 +3461,7 @@ Orange Coast College
 ORBIT
 Orchard Park High School
 ORCID
+Örebro University
 Oregon Episcopal School
 Oregon health & Science University
 Oregon Health and Science University
@@ -3313,6 +3471,7 @@ Orgeon State University
 Orincon
 Osaka Prefecture University
 Osaka University
+OSG Consortium
 Osibtys
 Osinergmin
 Osmania University
@@ -3320,6 +3479,7 @@ Osservatorio Astronomico di Trieste
 Osteoporosis & Arthritis Center, Inc.
 Ostfalia FH
 oswaldo cruz institute
+Other
 Otolaryngology Associates, PC
 OTT
 Otterbein University
@@ -3328,6 +3488,7 @@ OU
 ouhsc
 Our Lady of Lourdes Medical Center
 Our Lady of Mercy High School
+Ouranos Inc.
 OUSCC
 OWASP
 OWASP Learning Gateway Project
@@ -3335,6 +3496,7 @@ Owkin
 Oxnard College
 Ozyegin University
 P.P.Shirshov Institute of Oceanology of the Russian Academy of Sciences (IO RAS)
+Paapri Cloud Technologies
 pace junior science college
 Pace University
 Pacific Lutheran University
@@ -3347,10 +3509,13 @@ Paint Branch High School
 Pakistan Institute of Engineering and Applied Sciences
 Pakuan University
 Palau Community College
+Palla Bio
 Palo Alto Research Center
 Palomar College
 Pandora Gilboa High School
 Panjab University, Chandigarh
+Parallax Advanced Research Corporation
+Parallel Bio
 Paralogic, Inc.
 Parasoft
 ParaTools, Inc.
@@ -3373,6 +3538,7 @@ Paul Scherrer Institute
 Paul VI High School
 Pawsey Supercomputing Centre
 Pazmany Peter Catholic University
+PeafowlAI
 Peking University
 Pellissippi State Community College
 Pending
@@ -3394,6 +3560,7 @@ Pennsylvania State University
 Pennsylvania State University Erie, The Behrend College
 Pennsylvania State University, Mont Alto
 Pennsylvania State University, New Kensington
+Pennsylvania Western University
 Pension Fund
 PERCEIG AI SYSTEMS (OPC) PRIVATE LIMITED
 Perdana University
@@ -3426,7 +3593,8 @@ Philander Smith College
 Philippine Genome Center
 Philippine Systems Products Inc.
 Philipps University
-phòng khám ?a khoa Thái Hà
+phòng khám đa khoa Thái Hà
+Phuket Wittayalai School
 Physical Research Laboratory
 Physical Studies Institute
 Physical Studies Institute LLC
@@ -3440,6 +3608,7 @@ Pima Community College
 Pincess Anne Hospital
 Pine Manor College
 Pine-Richland High School
+Pinnacle Academy
 PISPR
 Pittsburgh Community Television
 Pittsburgh NMR Center for Biomedical Research
@@ -3460,12 +3629,14 @@ Plymouth State University
 PNNL
 PNU university
 Pohang University of Science and Technology
+Point Blue Conservation Science
 Point Loma Nazarene University
 Polaroid Corporation
 Polish Academy of Sciences
 Polish-Japanese Institute of Information Technology
 POLYATOMICS RESEARCH
 PolyGen Pharmaceuticals LLC
+PolyShape LTD
 Polytechnic University of Catalonia
 Polytechnic University of Milan
 Polytechnic University of Puerto Rico
@@ -3478,6 +3649,7 @@ Pondicherry University
 Pontifical Catholic University of Chile
 Pontifical Catholic University of Peru
 Pontifical Catholic University of Puerto Rico
+Pontifical Catholic University of Rio Grande do Sul
 Pontifical Catholic University of Valparaiso
 Pontifical Xavierian University
 Portland State University
@@ -3485,12 +3657,14 @@ Possaic Valley High School
 PostEra
 Potomac State College of West Virginia University
 Poughkeepsie High School
+Poznan University of Economics and Business
 Poznan University of Technology
 PPG Industries
 Prairie View A&M University
 Pramod, Inc.
 Prarieview A&M
 Prathyusha Institute of Technology and Management
+Precision AI Solutions
 Precision Wellness
 Prediction Company LLC
 Predictive Science, Inc.
@@ -3541,6 +3715,8 @@ Qualcomm Incorporated
 Quantic EMC, Inc.
 Quantum Chemistry Laboratory
 Quantum Chemistry Simulations
+Quantum Circuits, Inc.
+Quantum Formatics
 Quantum Research International
 Quantum Research Services
 QuantumWise A/S
@@ -3558,6 +3734,7 @@ Quinnipiac University
 R V College of Engineering
 R-Associates, Inc (RAI)
 R. W. Johnson PRI
+Rackspace Technology
 Radboud University
 Radboud University Department of Microbiology
 Radford
@@ -3583,6 +3760,7 @@ razi university
 RCAC
 RDT
 Ready At Dawn Studios
+Realta Fusion
 Red Hat
 Redeemer's University Ede
 Redesign Science Inc.
@@ -3600,6 +3778,7 @@ Relativity
 Reliable Edu Inc
 Renaissance Computing Institute
 Renault group
+Renewable Bioproducts Institute
 Renmin University of China
 Rensselaer at Hartford
 Rensselaer Polytechnic Institute
@@ -3617,6 +3796,7 @@ Rhapsody Data, LLC
 RHEA
 Rhenix
 Rhodes College
+Rhodes University
 Riau University
 Rice University
 Richard Stockton College of New Jersey
@@ -3662,6 +3842,7 @@ Rogue Wave Software
 Rohr
 Rollins College
 Ronan Systems
+Ronin Institute
 Rosalind Franklin University
 Rose-Hulman Institute of Technology
 Rosemead High School
@@ -3695,9 +3876,10 @@ Rutherford Appleton Laboratory
 RWTH Aachen University
 Ryerson University
 S V NIT Surat
-S&S Software
 S-Cubed
 S. G. B. Amravati University, Amravati
+S&S Software
+S2 Labs
 Saarland University
 Sabanci University
 Sabre, Inc.
@@ -3706,6 +3888,7 @@ Saddleback College
 SAFER Systems LLC
 Saga University
 Sagacious Diagnostics LLC
+Sage Bionetworks
 Saginaw Valley State University
 Saha Institute of Nuclear Physics
 Sail America
@@ -3715,7 +3898,6 @@ Saint Francis University
 Saint Francis Xavier University
 Saint James School of Medicine
 Saint Joseph's University
-Saint Jude Children's Research Hospital
 Saint Lawrence University
 Saint Louis College of Pharmacy
 Saint Louis University
@@ -3726,6 +3908,7 @@ Saint Mary's University
 Saint Mary's University (Canada)
 Saint Michael's College
 Saint Peter's College
+Saint Peter's University
 Saint Petersburg State University
 Saint Vincent College
 Saint Xavier University
@@ -3840,14 +4023,18 @@ Seattle Children's Hospital
 Seattle Children's Research Institute
 Seattle Pacific University
 Seattle University
+SecureBio
 SEED Program
 SEG
 Selcuk University
 Select or enter
 Self Employed
 Semiconductor Research Corporation
+Semnan University
+Senasa
 Senckenberg Climate and Biodiversity Reserach Centre
 Seneca Valley High School
+Sentinella
 seo
 Seoul American High School
 Seoul National University
@@ -3863,6 +4050,7 @@ Seton Hall University
 SEU Allen Joint Center for Neuron Morphology
 Sewickley Academy
 Shady Side Academy Senior School
+Shah Abdul Latif University Khairpur
 Shahid Beheshti University
 Shahjalal University of Science and Technology
 Shaikh Khalifa General Hospital
@@ -3874,10 +4062,12 @@ Shanghai Jiao Tong University
 Shanghai Ocean University
 Shanghai Supercomputer Center
 Shanghai Typhoon Institute
+Shanghai University
 ShanghaiTech University
 SHARCNET
 Sharenet/PEI
 Sharif University of Technology
+Sheetz
 Sheffield Hallam University
 Shell Oil Company
 Shell Technology Center Houston
@@ -3899,6 +4089,7 @@ Sichuan agricultural university
 Sichuan University
 Sidney High School
 SIEMEN
+Siemens
 Siemens Canada
 Siena College
 Sikkim Manipal Institute of Technology
@@ -3916,6 +4107,7 @@ Simpson College
 Simula Research Laboratory
 Simulation Technologies
 SIMUNE
+Sinai University
 Singapore Management University
 Singapore University of Technology and Design
 Sirifort
@@ -3932,7 +4124,6 @@ Slippery Rock University
 Slippery Rock Universtiy
 Slovak Academy of Sciences
 Slovak Technical University
-SLU
 SMACT Works, INC
 Smartremitt, LLC
 Smith College
@@ -3957,6 +4148,7 @@ Soil and Materials Engineers, Inc.
 SOKENDAI
 Solar Turbines Incorporated
 Solibyte Solutions
+Solid Power Operating, Inc.
 Somers High School
 Sona College of Technology
 Sonderus LT
@@ -3969,9 +4161,11 @@ Sourcery, Inc.
 Soutern University
 South African National Biodiversity Insitute
 South Brunswick High School
+South Carolina Department of Public Health
 South Carolina Governor's School
 South Carolina State University
 South China Acgricultural University
+South China University of Technology
 South Coast Air Quality Management District
 South Dakota School of Mines and Technology
 South Dakota State University
@@ -4004,6 +4198,7 @@ Southern University at New Orleans
 Southern University of Science and Technology, China
 Southwest Baptist University
 Southwest Fisheries Science Center
+Southwest Jiaotong University
 Southwest Research Institute
 Southwestern College
 Southwestern Indian Polytechnic Institute
@@ -4038,6 +4233,7 @@ Sri Sathya Sai Institute of Higher Learning
 SRM Institute of Science and Technology
 SRM University, Delhi-NCR, Sonepat
 SRTA-City
+Ss. Cyril and Methodius University of Skopje
 SSAI, NASA LaRC
 St George's, University of London
 St John's Research Institute
@@ -4054,6 +4250,7 @@ St. John Fisher College
 St. John's University
 St. Joseph's College - New York - Brooklyn
 St. Joseph's College - New York - Long Island
+St. Jude Children's Research Hospital
 St. Lawrence University
 St. Louis college of Pharmacy
 St. Louis Community College
@@ -4079,10 +4276,13 @@ Stark State College
 Start High School
 State Education Department
 State Islamic University of Sunan Gunung Djati
+State of Maine
 State of Nebraska
 State of Pennsylvania
 State of Tennessee
 State University of New York
+State University of Ponta Grossa
+Ștefan cel Mare University of Suceava
 Stellenbosch University
 Stephen F. Austin State University
 Sterling Federal Systems Inc.
@@ -4094,6 +4294,7 @@ Stevenson University
 Stockholm University
 Stowers Institute for Medical Research
 Strasbourg Astronomical Data Center (CDS)
+Stroydetal Khartsyzk
 structural engineering
 STUDENT
 Student at Nassau Community
@@ -4150,6 +4351,7 @@ Supersmith
 Supertek
 supportML
 Sura inc
+SURF
 SurfPlasma, Inc.
 SURONET
 Suruna
@@ -4161,6 +4363,7 @@ SVNIT, Surat
 Swansea University
 Swarthmore College
 Swedish Institute of Space Physics
+Swedish University of Agricultural Sciences
 Sweet Briar College
 Swinburne University of Technology
 Swiss Federal Institute of Technology in Lausanne
@@ -4179,6 +4382,7 @@ Synvivia, Inc.
 Syracuse University
 Systems Engineering Research Center
 SYSTRAN Corporation
+Széchenyi István University
 TAFE Elizabeth
 Taif university
 Taipei Medical University
@@ -4190,6 +4394,7 @@ Tamagawa University
 Tampere University of Technology
 Tanta University
 Tapestry MM Limited
+Taraba State University
 Taras Shevchenko National University of Kyiv
 Taravisual Corporation
 tarbiat modares
@@ -4217,13 +4422,14 @@ Technical University of Kenya
 Technical University of Madrid
 Technical University of Munich
 Technical University of Ostrava
-Technion, Israel
 Technion-Israel Institute of Technology
+Technion, Israel
 Technische Universitaet Ilmenau
 Technishe Hochschule
 Technological Institute of Aeronautics
 Technological Institute of Mexicali
 Technology Company
+TechnoVax
 Tecnológico de Costa Rica
 Tecnologico Nacional de Mexico
 Tecnology University of Panama
@@ -4242,8 +4448,10 @@ Telecom SudParis
 Telkom University
 Temple City High School
 Temple University
+Temple University Health System
 Temple University, School of Medicine
 TENET
+Tenet Healthcare
 Tennesse Tech University
 Tennessee Department of Environment and Conservation
 Tennessee Governor's Academy of Mathematics and Science
@@ -4253,6 +4461,7 @@ Teoco
 Terra Computers
 Terrapin Technologies, Inc.
 Terre Haute South High School
+Tersha LLC
 Tesla STEM High school
 Test
 test org
@@ -4264,10 +4473,11 @@ Texas A&M IU
 Texas A&M University
 Texas A&M University - San Antonio
 Texas A&M University at Galveston
+Texas A&M University-Central Texas
+Texas A&M University-San Antonio
 Texas A&M University, Commerce
 Texas A&M University, Corpus Christi
 Texas A&M University, Kingsville
-Texas A&M University-San Antonio
 Texas Advanced Computing Center
 Texas AnM
 Texas Biomedical Research Institute
@@ -4386,7 +4596,7 @@ TodoFoco
 Tohoku University
 Tokyo Electron America
 Tokyo Institute of Technology
-Tokyo Metropolitan University?, Hino Campus
+Tokyo Metropolitan University​, Hino Campus
 Tokyo University of Science
 Tolleson Union High School
 Tompkins Cortland Community College
@@ -4420,6 +4630,8 @@ Trent University
 Tri Alpha Energy
 Triangle Universities Computation Center
 Tribhuvan University
+Tribhuvan University obsolete, all 60 campuses should be just T.U.\n
+Tribhuvan University Pulchowk Campus
 Tribhuvan University, Birendra Multiple Campus
 Tribuvan University
 Trine University
@@ -4567,8 +4779,10 @@ Univ. of Cincinnati
 Univa Corporation
 Univerity of North Georgia
 Univerrsity of Wisconsin-Green Bay
+Univers
 Universi
 Universidad  Peruana Cayetano Heredia
+Universidad Alberto Hurtado
 Universidad Andres Bello
 Universidad Autónoma de Baja California Sur
 Universidad Autonoma de Chile
@@ -4590,26 +4804,31 @@ UNIVERSIDAD DE PAMPLONA
 Universidad de Panama
 Universidad de Salamanca
 Universidad de Santiago de Chile
+Universidad del Magdalena
 Universidad del Quindío
 Universidad ECCI
 Universidad estatal del sur de Manabí
 universidad federal de rio grande del sur
 Universidad Federal Sergipe
 Universidad Industrial de Santander
+Universidad Mayor de San Simón
 Universidad Nacional
 UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO
 Universidad Nacional de Costa Rica
 Universidad Nacional de Ingeniería
 Universidad Nacional de La Plata
+Universidad Nacional de Quilmes
 Universidad Nacional de Salta
 UNIVERSIDAD NACIONAL DE SAN AGUSTÍN
 universidad nacional de san juan
+Universidad Nacional de San Luis
 Universidad Nacional Mayor de San Marcos
 Universidad Peruana Cayetano Heredia
 UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
 Universidad Politecncia de Madrid
 Universidad Politecncia de Valencia
 Universidad Pontificia Bolivariana - Campus Laureles
+Universidad San Sebastián
 Universidad Tecnológica Nacional Facultad Regional Mendoza
 Universidade Aveiro
 Universidade de A Coruña
@@ -4651,6 +4870,7 @@ universitas sriwijaya
 Universitat Jaume I
 Universitat Oberta de Catalunya
 Universitat Politecnica de Catalunya
+Universität Tübingen
 Université de Lyon
 Universite de Strasbourg
 Université du Littoral Côte d'Opale
@@ -4703,6 +4923,7 @@ University of Arkansas for Medical Sciences
 University of Arkansas, Fort Smith
 University of Arkansas, Little Rock
 University of Arkansas, Pine Bluff
+University of Atlántico
 University of Auckland
 University of Augsburg
 University of Aveiro
@@ -4737,6 +4958,7 @@ University of Calgary
 University of Calgary, ASE lab
 university of calicut
 University of California Office of the President
+University of California-Riverside
 University of California, Berkeley
 University of California, Davis
 University of California, Irvine
@@ -4747,7 +4969,6 @@ University of California, San Diego
 University of California, San Francisco
 University of California, Santa Barbara
 University of California, Santa Cruz
-University of California-Riverside
 University of Cambridge
 University of Campania Luigi Vanvitelli
 University of Campinas
@@ -4764,6 +4985,7 @@ University of Charleston
 University of Chicago
 University of Chile
 University of China
+University of Chittagong
 University of Cincinnati
 university of clear lake
 University of Coimbra
@@ -4795,9 +5017,11 @@ University of Denver
 University of Derby
 University of Detroit Mercy
 University of Dhaka
+University of Dongola
 University of Dschang
 University of Duhok
 University of Duisburg-Essen
+University of East-West Medicine
 University of Eastern Finland
 University of Edinburgh
 University of El Salvador
@@ -4871,6 +5095,7 @@ University of Indianapolis
 University of Indonesia
 University of Innsbruck
 University of Insubria
+University of Ioannina
 University of Iowa
 University of Iowa Carver College of Medicine
 University of Iowa College of Medicine
@@ -4902,6 +5127,7 @@ University of Leicester
 University of Leiden
 University of Leoben
 University of León
+University of Lethbridge
 University of Leuven
 University of Liege
 University of Lille
@@ -4916,6 +5142,7 @@ University of Louisiana, Lafayette
 University of Louisiana, Monroe
 University of Louisville
 University of Luxembourg
+University of Lynchburg
 University of Lyon
 University of Macedonia
 university of madras
@@ -4973,18 +5200,22 @@ University of Missouri, Kansas City
 University of Missouri, Saint Louis
 University of Modena and Reggio Emilia
 University of Montana
+University of Montenegro
 University of Montreal
 University of Moratuwa
 university of morocco
 University of Mostar
 University of Mosul, Iraq
 University of Mount Union
+University of Muenster
 University of Mumbai
 University of Murcia
 University of Mysore
 University of Nairobi
+University of Namibia
 University of Namur
 University of Naples Federico II
+University of Navarra
 University of Nebraska Central Administration
 University of Nebraska Medical Center
 University of Nebraska Omaha
@@ -5047,6 +5278,7 @@ University of Pau and Pays de l'Adour
 University of Pavia
 University of Peloponnese
 University of Pennsylvania
+University of Pernambuco
 University of Perugia
 University of Phoenix
 University of Pisa
@@ -5073,6 +5305,7 @@ University of Puerto Rico, Rio Piedras
 University of Puget Sound
 University of Pune
 University of Queensland
+University of Rajshahi
 University of Reading
 University of redlands
 University of Regensburg
@@ -5086,6 +5319,7 @@ University of Rochester
 University of Rochester, NY
 University of Rome Tor Vergata
 University of Rostock
+University of Rwanda
 University of Saida
 University of Saint Mary
 University of Saint Thomas
@@ -5110,6 +5344,7 @@ University of Sheffield
 University of Sherbrooke
 University of Siegen
 University of Siena
+University of Silesia in Katowice
 University of Sioux Falls
 University of South Alabama
 University of South Bohemia
@@ -5143,6 +5378,7 @@ University of Technology Malaysia
 University of Technology, Jamaica
 University of Techology Clausthal
 University of Tehran
+University of Telepegaso
 University of Tennessee Health Science Center
 University of Tennessee System
 University of Tennessee, Chattanooga
@@ -5260,9 +5496,9 @@ University of Zululand
 University of Zurich
 University Politehnica of Bucharest
 University Stuttgart
+University System of Maryland
 University Toulouse III Paul Sabatier
 Universityy of South Dakota
-Universität Tübingen
 Universiy of Puerto Rico - Rio Piedras Campus
 Universiy of South carolina
 Universtiy of Hawaii at Manoa
@@ -5334,6 +5570,7 @@ USDA Agricultural Research Service
 USDA Agricultural Research Service Midwest Area
 USDA Agricultural Research Service Plains Area
 USDA Beltsville Agricultural Research Center
+USDA Forest Service
 usf
 USGS EROS
 USHealth Advisors
@@ -5367,12 +5604,14 @@ UTMB
 UTMB at Galveston
 UTN
 UTQ
+Utrecht University
 UTRGV
 UTSPH
 UVM
 UWM; USGBC
 VA Medical Center
 VA New York Harbor Medical Center
+Valdosta State University
 Valencia College
 Valley City State University
 Valparaiso University
@@ -5419,6 +5658,7 @@ Virginia State University
 Virginia Tech-Wake Forest School of Biomedical Engineering and Sciences
 Virginia Tech-Wake Forest University School of Biomedical Engineering and Sciences
 Virtual Support Systems
+Visa, Inc.
 Visage Production, Inc.
 Visicom, Inc.
 Visionet Systems Inc.
@@ -5453,6 +5693,7 @@ Wake Forest University
 Wake Technical Community College
 Walchand College Of Engineering
 Walden University
+Walker Die Casting
 Walla Walla University
 Walsh University
 Walt Disney Imagineering
@@ -5489,6 +5730,7 @@ webster
 Webster University
 Webupdates
 Weidlinger Associates, Inc.
+Weights & Biases
 Weill Cornell Medical College
 Weizmann Institute of Science
 Wellcome Trust Sanger Institute
@@ -5548,6 +5790,10 @@ Whitworth University
 Whole Foods Market
 Wichita State University
 Widener University
+Wikimedia Indonesia
+Wilberforce University
+Wildlife Institute of India
+Wildlife Research and Training Institute
 Wiley College
 Wilfrid Laurier University
 Wilkes University
@@ -5582,11 +5828,12 @@ World Knowledge Bank
 Worlton and Associates
 Wright State University
 Wright-Patterson Air Force Base
-Wroc?aw University of Science and Technology
 Wroclaw University of Environmental and Life Sciences
+Wrocław University of Science and Technology
 WSAP
 Wuhan institute of virology
 Wuhan University
+Wuhan University of Technology
 WVSU
 WVU Center for Neuroscience
 WVU Medicine
@@ -5597,6 +5844,7 @@ Wyotech
 X-ScaleSolutions
 X-wave innovation
 Xanadu Quantum Technologies
+Xavier University
 Xavier University of Louisiana
 XD-ALLOCATIONS
 Xentity Corporation
@@ -5610,6 +5858,7 @@ Yachay E.P
 Yale University
 Yale-New Haven Hospital
 Yamaha Marine Precision Propellers, Inc.
+Yangzhou University
 Yarl Technologies
 Yeshiva University
 Yildiz Technical University
@@ -5627,12 +5876,13 @@ Zanjan university
 Zaragoza University
 Zeptoh
 Zhejiang Meteorological Observatory
-Zhejiang Normal University?
+Zhejiang Normal University 
 Zhejiang Sci-Tech University
 Zhejiang University
 Zhejiang University of Technology
 Zhongkai University of Agriculture and Engineering
 Zhongyuan University of technology
+Ziane Achour University of Djelfa (UZAD)
 Zilber School of Public Health
 Zoe Braiterman, Consultant
 Zolayola
@@ -5641,6 +5891,3 @@ Zoological Survey of India, Kolkata
 Zuse Institute Berlin
 ZyLAB Technologies
 Zymera, Inc.
-[C]Worthy
-[self]
-Örebro University
