@@ -3,9 +3,10 @@
 ###########################################################################
 # This script enrolls new users into an ACCESS CI COmanage Registry.
 # Users can be enrolled one-at-a-time or in bulk by reading users from
-# a CSV file. The input file contains lines of the following format:
+# a CSV file (separated by semicolons, since university names can have
+# commas). The input file contains lines of the following format:
 #
-#    firstname,middlename,lastname,organization,emailaddress
+#    firstname;middlename;lastname;organization;emailaddress
 #
 # Middlename can be empty, but all other fields must be present. The
 # organization must match an existing organization in the ACCESS database.
@@ -58,10 +59,10 @@ Options:
     -e <email> Email address of a single user to be enrolled.
     -i <infile> Input CSV file containing a list of users to be enrolled.
        Each line contains first name, middle name, last name, organizaton,
-       and email address, separated by commas. Overrides -f,-m,-l,-g,-e.
+       and email address, separated by semicolons. Overrides -f,-m,-l,-g,-e.
     -o <outfile> Output CSV file for the newly enrolled users. Defaults to
        STDOUT.  Each line contains first name, middle name, last name,
-       organization, email address, and ACCESS ID, separated by commas.
+       organization, email address, and ACCESS ID, separated by semicolons.
     -v Print additional informational and warning messages to STDERR.
     -h Print this help message and quit."
     exit 99
@@ -702,16 +703,16 @@ function output_access_id_for_user {
 
     if [ -n "${outfile}" ] ; then
         if [ -n "${firstline}" ] ; then # Append to file after first line
-            printf "%s,%s,%s,%s,%s,%s\n" \
+            printf "%s;%s;%s;%s;%s;%s\n" \
                 "${firstname}" "${middlename}" "${lastname}" \
                 "${organization}" "${email}" "${accessid}" >> "${outfile}"
         else # Overwrite any existing file for the first line
-            printf "%s,%s,%s,%s,%s,%s\n" \
+            printf "%s;%s;%s;%s;%s;%s\n" \
                 "${firstname}" "${middlename}" "${lastname}" \
                 "${organization}" "${email}" "${accessid}" > "${outfile}"
         fi
     else # Print to STDOUT
-        printf "%s,%s,%s,%s,%s,%s\n" \
+        printf "%s;%s;%s;%s;%s;%s\n" \
             "${firstname}" "${middlename}" "${lastname}" \
             "${organization}" "${email}" "${accessid}"
     fi
@@ -804,8 +805,8 @@ if [ -n "${infile}" ] ; then
     # Read in CSV file to enroll multiple users
     linecount=1
     while read -r LINE ; do
-        # Split line on commas
-        IFS=',' read -ra params <<<"${LINE}"
+        # Split line on semicolons
+        IFS=';' read -ra params <<<"${LINE}"
         # Sanity check - make sure all paramters are present
         # Note that middle name (params[1]) may be blank
         if [ -n "${params[0]}" ] &&

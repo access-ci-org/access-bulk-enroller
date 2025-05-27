@@ -48,7 +48,7 @@ Options:
     -i <infile> Input CSV file containing a list of users to be enrolled.
        Defaults to 'bulk-enrollment.csv'. Each line of the file contains
        firstname,middlename,lastname,organizaton,email address
-       (i.e., user attributes separated by commas).
+       (i.e., user attributes separated by semicolons).
     -g <orgfile> File containing the list of ACCESS Organizations, one
        organization per line. Defaults to 'access_orgs.txt'. If the file
        is not found, it will be downloaded to the current directory.
@@ -173,8 +173,8 @@ if [ -r "${infile}" ] && [ -r "${orgfile}" ] ; then
             >&2 echo -ne "\rLine ${linecount}/${totallines}"
         fi
 
-        # Split line on commas; params[] contains names, email, org
-        IFS=',' read -ra params <<<"${LINE}"
+        # Split line on semicolons; params[] contains names, email, org
+        IFS=';' read -ra params <<<"${LINE}"
 
         # First, make sure all paramters are present
         # Note that middle name (params[1]) may be blank
