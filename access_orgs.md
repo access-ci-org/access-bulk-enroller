@@ -13,7 +13,7 @@ Ticket](https://support.access-ci.org/help-ticket) and ask this be done.)
 ```
 mysql -u cilogon_master -p \
       -h db.cilogon.org \
-      -e 'select name from access_registry.cm_access_organizations order by name;' \
+      -e "select name from access_registry.cm_access_organizations where status='A' order by name;" \
       | tee /tmp/access_orgs.txt
 ```
 
