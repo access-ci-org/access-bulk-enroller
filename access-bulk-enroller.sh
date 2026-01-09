@@ -3,7 +3,7 @@
 ###########################################################################
 # This script enrolls new users into an ACCESS CI COmanage Registry.
 # Users can be enrolled one-at-a-time or in bulk by reading users from
-# a CSV file (separated by olons, since university names can have
+# a CSV file (separated by colons, since university names can have
 # commas). The input file contains lines of the following format:
 #
 #    firstname:middlename:lastname:organization:emailaddress
@@ -59,7 +59,7 @@ Options:
     -e <email> Email address of a single user to be enrolled.
     -i <infile> Input CSV file containing a list of users to be enrolled.
        Each line contains first name, middle name, last name, organizaton,
-       and email address, separated by olons. Overrides -f,-m,-l,-g,-e.
+       and email address, separated by colons. Overrides -f,-m,-l,-g,-e.
     -o <outfile> Output CSV file for the newly enrolled users. Defaults to
        STDOUT.  Each line contains first name, middle name, last name,
        organization, email address, and ACCESS ID, separated by colons.

@@ -58,10 +58,11 @@ contents of the CSV file before attempting to run the
 and email addresses all have a valid format.
 
 The input file (`bulk-enrollment.csv` by default) should have lines of the
-following format:
+following format with attributes separated by colons (since organization names
+can contain commas):
 
 ```
-firstname,middlename,lastname,organization,emailaddress
+firstname:middlename:lastname:organization:emailaddress
 ```
 
 Note that `middlename` can be empty/blank, but all other attributes are
@@ -83,8 +84,8 @@ automatically.
 Options:
     -i <infile> Input CSV file containing a list of users to be enrolled.
        Defaults to 'bulk-enrollment.csv'. Each line of the file contains
-       firstname,middlename,lastname,organizaton,email address
-       (i.e., user attributes separated by commas).
+       firstname:middlename:lastname:organizaton:email address
+       (i.e., user attributes separated by colons).
     -g <orgfile> File containing the list of ACCESS Organizations, one
        organization per line. Defaults to 'access_orgs.txt'. If the file
        is not found, it will be downloaded to the current directory.
@@ -121,10 +122,10 @@ Options:
     -e <email> Email address of a single user to be enrolled.
     -i <infile> Input CSV file containing a list of users to be enrolled.
        Each line contains first name, middle name, last name, organizaton,
-       and email address, separated by commas. Overrides -f,-m,-l,-g,-e.
+       and email address, separated by colons. Overrides -f,-m,-l,-g,-e.
     -o <outfile> Output CSV file for the newly enrolled users. Defaults to
        STDOUT.  Each line contains first name, middle name, last name,
-       organization, email address, and ACCESS ID, separated by commas.
+       organization, email address, and ACCESS ID, separated by colons.
     -v Print additional informational and warning messages to STDERR.
     -h Print this help message and quit.
 ```
@@ -141,5 +142,5 @@ By default, output is to STDOUT. This can be overridden with the
 is of the following format:
 
 ```
-firstname,middlename,lastname,organization,emailaddress,accessid
+firstname:middlename:lastname:organization:emailaddress:accessid
 ```
